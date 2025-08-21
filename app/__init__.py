@@ -7,4 +7,10 @@ from flask import Flask
 def create_app():
 	app = Flask(__name__)
 
+	from app.blueprints.main import main
+	app.register_blueprint(main)
+
+	from app.blueprints.spanish import spanish
+	app.register_blueprint(spanish)
+
 	return app
