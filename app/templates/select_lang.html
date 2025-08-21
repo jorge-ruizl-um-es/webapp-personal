@@ -1,0 +1,63 @@
+<!-- Template for specifying the global design of the page (base design) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+	<title>{%block title%}{%endblock%}</title> 
+</head>
+
+<body class="min-vh-100 bg-white text-dark d-flex flex-column">
+
+	<!-- Cabecera -->
+	<header class="bg-dark text-white py-5 border-bottom border-1">
+		<div class="container text-center">
+		<h1 class="display-4 fw-bold m-0">Jorge Ruiz López</h1>
+		<p class="lead text-white-50 mt-2 mb-0">Data Analysis • Technology • AI</p>
+		</div>
+	</header>
+
+	<!-- Mensaje de selección -->
+	<section class="container my-4 text-center">
+		<div class="text-center">
+			<span class="px-5 bg-white text-uppercase fw-semibold text-muted fs-3">
+			Select preferred language
+			</span>
+		</div>
+	</section>
+
+	<!-- Selector de idioma -->
+	<main class="container-fluid min-vh-100 p-0">
+		<div class="row g-0 min-vh-100">
+		<!-- Español -->
+		<div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+			<a href="{{url_for('spanish.dashboard')}}"
+			class="btn btn-outline-dark w-100 h-100 d-flex align-items-center justify-content-center fs-1 fw-bold rounded-0">
+			Español
+			</a>
+		</div>
+		<!-- English -->
+		<div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+			<a href="{{url_for('english.dashboard')}}"
+			class="btn btn-outline-dark w-100 h-100 d-flex align-items-center justify-content-center fs-1 fw-bold rounded-0">
+			English
+			</a>
+		</div>
+		</div>
+	</main>
+
+	<!-- Footer sobrio -->
+	<footer class="bg-dark text-white-50 py-3 text-center mt-auto">
+		<small>© <span id="year"></span> Jorge Ruiz López</small>
+	</footer>
+
+	<script>
+		document.getElementById("year").textContent = new Date().getFullYear();
+	</script>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

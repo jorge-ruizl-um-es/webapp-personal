@@ -1,11 +1,9 @@
-# Vista de la aplicación para un usuario sin registrar, 
-# página principal
+# Main view of the page
 
 from flask import Blueprint, render_template
 
 main = Blueprint('main', __name__)
 
-@main.route('/my-cv/jorge')
+@main.route('/')
 def index():
-	# return render_template('index.html')
-	return "Hola Jorge!"
+	return render_template('index.html')
