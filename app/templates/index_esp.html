@@ -83,8 +83,9 @@
 	<h2 class="mb-5 fs-1">Formación</h2>
 
 	<!-- Idiomas -->
-	<div class="mb-3 px-5" id="idiomas">
-		<h2 class="h3 mb-4">Idiomas</h2>
+	<div class="mb-5 px-5" id="idiomas">
+		<h2 class="h3">Idiomas</h2>
+		<p class="fs-5 mb-4">Estos son los idiomas que manejo y con los que puedo sentirme cómodo hablando, escribiendo y escuchando; junto con mi grado de maestría en cada uno.</p>
 
 		<ol class="list-group list-group-numbered">
 			{% for idioma in user_data['languages'] %}
@@ -112,8 +113,149 @@
 		</ol>
 	</div>
 
-	<!--  -->
 
+	<!-- Estudios -->
+	<div class="container my-5 px-5" id="educacion">
+		<h2 class="mb-1">Educación</h2>
+		<p class="fs-5 mb-4" style="font-size: large;">Mi formación reglada, con los puntos más relevantes.</p>
+		
+		<!-- CSS embebido para desplazamiento -->
+		<style>
+			.carousel-wrap{ position:relative; isolation:isolate; } /* capa propia */
+			.carousel-track{ scroll-snap-type:x mandatory; position:relative; z-index:0; }
+			.carousel-track > .study-card{
+				scroll-snap-align:start;
+				min-width: 380px; max-width: 440px; /* puedes ajustar tamaño */
+				border-radius:.75rem;
+			}
+			.study-card{ transition:transform .2s, box-shadow .2s; }
+			.study-card:hover{ transform:translateY(-4px); box-shadow:0 .75rem 1.25rem rgba(0,0,0,.15); }
+
+			/* Flechas en overlay por encima del carrusel */
+			.carousel-arrows{
+				position:absolute; inset:0;
+				display:flex; align-items:center; justify-content:space-between;
+				padding:0 .25rem;
+				pointer-events:none;  /* la capa ignora clicks */
+				z-index:10;
+			}
+			.carousel-arrows .btn{ pointer-events:auto; } /* los botones sí */
+
+			/* === Certificados: solo visibles en hover (desktop) === */
+			.card-actions{ 
+				opacity:0; 
+				visibility:hidden; 
+				transition:opacity .2s ease, visibility .2s ease;
+			}
+			@media (hover:hover){
+				.study-card:hover .card-actions,
+				.study-card:focus-within .card-actions{
+					opacity:1; visibility:visible;
+			}
+			}
+			/* En dispositivos sin hover (móvil/tablet táctil), siempre visibles */
+			@media (hover:none){
+				.card-actions{ opacity:1; visibility:visible; }
+			}
+		</style>
+
+		<div class="carousel-wrap" data-carousel>
+
+			<!-- Pista desplazable -->
+			<div class="carousel-track d-flex gap-5 overflow-auto py-2 px-1">
+			{% for s in user_data['studies'] %}
+				<div class="card study-card shadow-sm border-0">
+					<div class="card-body">
+						<h5 class="mb-1">{{ s.place }}</h5>
+						<div class="fw-semibold">{{ s.type }}</div>
+						<div class="text-muted mb-2">{{ s.date }}</div>
+
+						<ul class="ps-3 mb-3">
+						{% for d in s.description %}
+							<li>{{ d }}</li>
+						{% endfor %}
+						</ul>
+
+						{% if s.certificados %}
+						<div class="card-actions">
+							{% for cert in s.certificados %}
+							<a href="{{ url_for('static', filename='files/' ~ cert) }}"
+								class="btn btn-dark btn-sm me-2 mb-2" download>
+								Certificado
+							</a>
+							{% endfor %}
+						</div>
+						{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+			</div>
+			
+			<!-- Mostrar flechas si hay más de 3 elementos -->
+			{% if user_data['studies']|length > 3 %}
+      			<div class="carousel-arrows d-none d-md-flex">
+        			<button class="btn btn-outline-dark rounded-circle shadow" data-dir="left"  aria-label="Anterior">‹</button>
+        			<button class="btn btn-outline-dark rounded-circle shadow" data-dir="right" aria-label="Siguiente">›</button>
+      			</div>
+    		{% endif %}
+
+		</div>
+	</div>
+
+	
+	<!-- Habilidades destacables -->
+	<div class="container my-5 px-5" id="habilidades">
+		<h2 class="mb-1">Habilidades destacables</h2>
+		<p class="fs-5 mb-4" style="font-size: large;">Habilidades o aptitudes que he ido adquieriendo gracias a mi formación tanto académica como autodidacta o mediante cursos.</p>
+
+		<!-- Lista de cards con las habilidades -->
+		<div class="carousel-wrap" data-carousel="">
+
+			<!-- Pista desplazable -->
+			<div class="carousel-track d-flex gap-5 overflow-auto py-2 px-1">
+			{% for s in user_data['education'] %}
+				<div class="card study-card shadow-sm border-0">
+					<div class="card-body">
+						<h5 class="mb-1">{{ s.skill }}</h5>
+						<div class="mb-2">{{ s.description }}</div>
+
+					<ul class="ps-3 mb-3">
+					{% for d in s.skill_detail %}
+						<li>{{ d }}</li>
+					{% endfor %}
+					</ul>
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+
+		<!-- Mostrar flechas si hay más de 3 elementos -->
+		{% if user_data['education']|length > 3 %}
+			<div class="carousel-arrows d-none d-md-flex">
+				<button class="btn btn-outline-dark rounded-circle shadow" data-dir="left"  aria-label="Anterior">‹</button>
+				<button class="btn btn-outline-dark rounded-circle shadow" data-dir="right" aria-label="Siguiente">›</button>
+			</div>
+		{% endif %}
+	</div>
+
+	<!-- JS genérico para desplazamiento con flechas -->
+	<script>
+		document.querySelectorAll('[data-carousel]').forEach(section => {
+			const track = section.querySelector('.carousel-track');
+			section.querySelectorAll('[data-dir]').forEach(btn => {
+			btn.addEventListener('click', () => {
+				const step = track.clientWidth * 0.9;               // tamaño del scroll
+				const dir  = btn.dataset.dir === 'left' ? -1 : 1;
+				track.scrollBy({ left: dir * step, behavior: 'smooth' });
+			});
+			});
+		});
+	</script>
+
+</div>
+
+<div class="my-5" id="experiencia">
+	<h2 class="mb-5 fs-1">Formación</h2>
 </div>
 
 {%endblock%}
