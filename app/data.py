@@ -52,6 +52,13 @@ data_esp = {
 		{'type': 'Alumno Interno en el Departamento de Ingeniería y Tecnología de Computadores (UMU)',
 		 'date': '2024 - Actualidad',
 		 'descripcion': 'Bajo la tutela del Dr. José Rubén Titos, puedo iniciarme en el mundo de la investigación, realizando diversos proyectos que tienen que ver con la organización de una asignatura universitaria y la optimización de la experiencia del alumnado mediante entornos de aprendizaje controlados y automatizados. Todo esto se realiza con Python y Bash principalmente, y me permite colaborar en la mejora de los recursos que se ofrecen poniendo en práctica mis habilidades.'}
+	],
+
+	'languages': [
+		{'lang': "Español", "level": "Lengua Materna", "certificate": ""},
+		{'lang': "Inglés", "level": "Avanzado C1", "certificate": "AÑADIR"},
+		{'lang': "Francés", "level": "Intermedio Alto B2", "certificate": "AÑADIR"},
+		{'lang': "Japonés", "level": "Básico", "certificate": ""}
 	]
 }
 
