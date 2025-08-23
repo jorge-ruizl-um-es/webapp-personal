@@ -45,13 +45,27 @@ data_esp = {
 	],
 
 	'experience': [
-		{'type': 'Grado en Ciencia e Ingeniería de Datos (UMU)',
-		 'date': '2023 - Actualidad',
-		 'description': 'La titulación me permite aprender una amplia variedad de herramientas y adquirir una serie de conocimientos que puedo aplicar en diversos proyectos.'},
-
-		{'type': 'Alumno Interno en el Departamento de Ingeniería y Tecnología de Computadores (UMU)',
+		{'type': 'Alumno Interno en el Departamento de Ingeniería y Tecnología de Computadores',
 		 'date': '2024 - Actualidad',
-		 'descripcion': 'Bajo la tutela del Dr. José Rubén Titos, puedo iniciarme en el mundo de la investigación, realizando diversos proyectos que tienen que ver con la organización de una asignatura universitaria y la optimización de la experiencia del alumnado mediante entornos de aprendizaje controlados y automatizados. Todo esto se realiza con Python y Bash principalmente, y me permite colaborar en la mejora de los recursos que se ofrecen poniendo en práctica mis habilidades.'}
+		 'place': 'Universidad de Murcia, España',
+		 'descripcion': ['Tutelado por el Dr. José Rubén Titos.', 'Iniciación en el ámbito de la investigación científicos - Lectura y producción de "papers".', 'Participación en el desarrollo de herramientas para mejorar los recursos de una asignatura de mi propio grado.', 'Programación de utilidades para favorecer el aprendizaje automatizado.', 'Proyectos de análisis de grandes cantidades de datos de alumnos para mejorar la calidad de la asignatura.', 'Se pueden ver las actividades realizadas con detalle durante el curso 2024-25 en el informe.'],
+		 'certificados': [
+			{'nombre': 'Nombramiento Curso 24/25', 'file': 'nombramiento_alu_interno.pdf'},
+			{'nombre': 'Informe Curso 24/25', 'file': 'informe_alu_interno_24-25.pdf'}
+		 ]}
+	],
+
+	'studies': [
+		{'type': 'Grado en Ciencia e Ingeniería de Datos',
+		 'date': '2023 - Actualidad',
+		 'place': 'Universidad de Murcia, España',
+		 'description': ['Herramientas de análisis de datos avanzado, estadística, Machine Learning, tratamiento de datos, etc.', 'Aprendizaje con proyectos para poner en práctica los contenidos teóricos.', 'Realización de prácticas tanto individuales como en grupos.', 'En proceso - Nota media de 9.8 y 19 asignaturas con Matrícula de Honor.']},
+		
+		{'type': 'Bachillerato en Ciencias',
+		 'date': '2021 - 2023',
+		 'place': 'IES Ramón Arcas Meca, Lorca (Murcia)',
+		 'description': ['Nota media de 10.', 'Graduado con Mención Honorífica en toda la etapa.', 'Premiado en la Olimpiada de Física (Universidad de Murcia) - 8º puesto.', 'Participación en talleres de debate y de música.'],
+		 'certificados': ['informe_alu_interno.pdf']},
 	],
 
 	'languages': [
