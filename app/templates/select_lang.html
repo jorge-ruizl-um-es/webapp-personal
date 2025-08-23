@@ -14,7 +14,7 @@
 	<!-- Cabecera -->
 	<header class="bg-dark text-white py-5 border-bottom border-1">
 		<div class="container text-center">
-		<h1 class="display-4 fw-bold m-0">Jorge Ruiz López</h1>
+		<h1 class="display-4 fw-bold m-0">{{user_data['name']}} {{user_data['surname']}} {{user_data['surname2']}}</h1>
 		<p class="lead text-white-50 mt-2 mb-0">Data Analysis • Technology • AI</p>
 		</div>
 	</header>
@@ -48,9 +48,9 @@
 		</div>
 	</main>
 
-	<!-- Footer sobrio -->
+	<!-- Footer -->
 	<footer class="bg-dark text-white-50 py-3 text-center mt-auto">
-		<small>© <span id="year"></span> Jorge Ruiz López</small>
+		<small>© <span id="year"></span> {{user_data['name']}} {{user_data['surname']}} {{user_data['surname2']}}</small>
 	</footer>
 
 	<script>

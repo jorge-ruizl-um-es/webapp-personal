@@ -4,9 +4,77 @@
 
 {%block content%}
 
-<div class="container text-center mt-3">
-	<h1>Jorge Ruiz López</h1>
-	<h3>Mi CV</h3>
+<div class="text-center">
+  <img src="{{ url_for('static', filename='images/perfil_malo2.jpeg') }}" 
+  	class="img-fluid rounded-circle" alt="Foto de Perfil" style="width: 275px; height: 275px; object-fit: cover;">
+</div>
+
+<div class="container text-center mt-4">
+	<h1 style="font-family: 'Poppins', sans-serif; font-size: 3.5rem; font-weight: 300;">
+		Jorge Ruiz López
+	</h1>
+	<br>
+	<a href="{{ url_for('static', filename='files/CV.pdf') }}" 
+   		class="btn btn-dark btn-lg mx-auto text-center bg-dark text-white"
+   		download>
+  		Descargar CV
+	</a>
+</div>
+
+<!-- Sección Sobre mí -->
+<div class="container mt-5">
+  <div class="card shadow-lg border-0 rounded-3">
+    <div class="card-body mx-4">
+      <h2 class="card-title text-center mb-4">Sobre mí</h2>
+	  <h4>¡Bienvenido a mi espacio personal!</h3>
+	  <p class="fs-5 mb-4" style="text-align: justify;">Soy Jorge Ruiz López, estudiante de tercer año de Ciencia e Ingeniería de Datos en la Universidad de Murcia. 
+          Aquí encontrarás una parte de mi formación académica, personal y profesional. Iré actualizando la información
+          con los nuevos proyectos que vaya desarrollando y los logros que vaya obteniendo a lo largo de mi carrera.
+      </p>
+
+	  <!-- Dos columnas -->
+		<div class="row row-cols-1 row-cols-lg-2 g-5">
+		<!-- Columna izquierda: párrafos -->
+			<div class="col">
+				{%for par in user_data['description']%}
+					<p class="fs-5 mb-4 text-justify" style="text-align: justify;"">
+						{{par}}
+					</p>
+				{%endfor%}
+			</div>
+
+		<!-- Columna derecha con lista de skills -->
+			<div class="col px-4, py-4">
+				<div class="about-skills">
+					<br>
+
+					<h5 class="text-uppercase text-muted mb-3">Habilidades destacadas</h6>
+
+					<ul class="fs-5 mb-3">
+						<li class="mb-3">🧠 Inteligencia Artificial y Machine Learning</li>
+						<li class="mb-3">📊 Análisis de datos y visualización</li>
+						<li class="mb-3">🛠️ Automatización con Python (ETL, scrapping, APIs)</li>
+						<li class="mb-3">🌐 Desarrollo cliente/servidor · Redes</li>
+					</ul>
+
+					<br>
+
+					<div class="d-flex flex-wrap gap-2">
+						<span class="badge rounded-pill text-bg-dark" style="font-size: 1rem; padding: 0.6em 1em;">Python</span>
+						<span class="badge rounded-pill text-bg-secondary" style="font-size: 1rem; padding: 0.6em 1em;">Pandas</span>
+						<span class="badge rounded-pill text-bg-secondary" style="font-size: 1rem; padding: 0.6em 1em;">SQL</span>
+						<span class="badge rounded-pill text-bg-secondary" style="font-size: 1rem; padding: 0.6em 1em;">Git</span>
+						<span class="badge rounded-pill text-bg-secondary" style="font-size: 1rem; padding: 0.6em 1em;">APIs</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<p class="fs-5 mb-4" style="text-align: justify;">Mi objetivo es permanecer en constante crecimiento como profesional y como persona, a la par que gano experiencia en distintos ámbitos y contribuyo con mis habilidades en programación, análisis e investigación. Este sitio refleja quién soy, qué he aprendido y conseguido hasta ahora, y hacia dónde quiero dirigirme.
+      	</p>
+		
+	</div>
+  </div>
 </div>
 
 {%endblock%}
