@@ -24,13 +24,13 @@
 <!-- Sección Sobre mí -->
 <div class="container mt-5">
   <div class="card shadow-lg border-0 rounded-3">
-    <div class="card-body mx-4">
-      <h2 class="card-title text-center mb-4">Sobre mí</h2>
+	<div class="card-body mx-4">
+	  <h2 class="card-title text-center mb-4">Sobre mí</h2>
 	  <h4>¡Bienvenido a mi espacio personal!</h3>
 	  <p class="fs-5 mb-4" style="text-align: justify;">Soy Jorge Ruiz López, estudiante de tercer año de Ciencia e Ingeniería de Datos en la Universidad de Murcia. 
-          Aquí encontrarás una parte de mi formación académica, personal y profesional. Iré actualizando la información
-          con los nuevos proyectos que vaya desarrollando y los logros que vaya obteniendo a lo largo de mi carrera.
-      </p>
+		  Aquí encontrarás una parte de mi formación académica, personal y profesional. Iré actualizando la información
+		  con los nuevos proyectos que vaya desarrollando y los logros que vaya obteniendo a lo largo de mi carrera.
+	  </p>
 
 	  <!-- Dos columnas -->
 		<div class="row row-cols-1 row-cols-lg-2 g-5">
@@ -71,10 +71,49 @@
 		</div>
 
 		<p class="fs-5 mb-4" style="text-align: justify;">Mi objetivo es permanecer en constante crecimiento como profesional y como persona, a la par que gano experiencia en distintos ámbitos y contribuyo con mis habilidades en programación, análisis e investigación. Este sitio refleja quién soy, qué he aprendido y conseguido hasta ahora, y hacia dónde quiero dirigirme.
-      	</p>
-		
+	  	</p>	
 	</div>
   </div>
+</div>
+
+<br>
+
+<!-- Sección de formación -->
+<div class="my-5" id="formacion">
+	<h2 class="mb-5 fs-1">Formación</h2>
+
+	<!-- Idiomas -->
+	<div class="mb-3 px-5" id="idiomas">
+		<h2 class="h3 mb-4">Idiomas</h2>
+
+		<ol class="list-group list-group-numbered">
+			{% for idioma in user_data['languages'] %}
+				<li class="list-group-item py-3" style="font-size: large;">
+					<div class="d-flex justify-content-between align-items-center">
+						<div>
+							<div class="fw-semibold">
+								{{idioma['lang']}}
+							</div>
+
+							<small class="text-muted">
+								{{idioma['level']}}
+							</small>
+						</div>
+						
+						{% if idioma['certificate'] %}
+							<a href="{{url_for('static', filename='files/' ~ idioma['certificate'])}}"
+								class="badge rounded-pill text-bg-dark text-decoration-none" download>
+								Certificado
+							</a>
+						{%endif%}
+					</div>
+				</li>
+			{%endfor%}
+		</ol>
+	</div>
+
+	<!--  -->
+
 </div>
 
 {%endblock%}

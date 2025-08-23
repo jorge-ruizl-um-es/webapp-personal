@@ -56,7 +56,7 @@ data_esp = {
 
 	'languages': [
 		{'lang': "Español", "level": "Lengua Materna", "certificate": ""},
-		{'lang': "Inglés", "level": "Avanzado C1", "certificate": "AÑADIR"},
+		{'lang': "Inglés", "level": "Avanzado C1", "certificate": "AÑADIR"},  #"english_c1.pdf" dentro de static/files
 		{'lang': "Francés", "level": "Intermedio Alto B2", "certificate": "AÑADIR"},
 		{'lang': "Japonés", "level": "Básico", "certificate": ""}
 	]
