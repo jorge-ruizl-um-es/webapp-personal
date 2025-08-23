@@ -7,6 +7,7 @@ from flask import Flask
 def create_app():
 	app = Flask(__name__)
 
+	# Integrate blueprints for different routes
 	from app.blueprints.select_lang import lang
 	app.register_blueprint(lang)
 
