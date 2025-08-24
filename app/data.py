@@ -33,7 +33,7 @@ data_esp = {
 
 		 {'skill': 'Herramientas colaborativas y trabajo en equipo',
    		 'description': 'Trabajo constantemente con Git y Google Collab, además de contribuir en proyectos de mayor envergadura como alumno interno, o colaborar con otros de mis compañeros. Soy muy activo en GitHub.',
-		 'skill_detail': ['Git', 'GitHub', 'Google Collab', 'Docker' 'Trabajo en equipo']},
+		 'skill_detail': ['Git', 'GitHub', 'Google Collab', 'Docker', 'Trabajo en equipo']},
 
 		 {'skill': 'Manejo de Sistemas Operativos basados en Linux',
    		 'description': 'Trabajo cómodamente en entornos de Linux. Estoy acostumbrado a interactuar con la terminal y con el shell, lo que supone un aumento en mi eficiencia al realizar ciertas tareas.',
@@ -73,6 +73,26 @@ data_esp = {
 		{'lang': "Inglés", "level": "Avanzado C1", "certificate": "AÑADIR"},  #"english_c1.pdf" dentro de static/files
 		{'lang': "Francés", "level": "Intermedio Alto B2", "certificate": "AÑADIR"},
 		{'lang': "Japonés", "level": "Básico", "certificate": ""}
+	],
+
+	'logos': [
+		{"title": "Python", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg"},
+		{"title": "R", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rstudio/rstudio-original.svg"},
+		{"title": "Oracle", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"},
+    	{"title": "Docker", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"},
+		{"title": "NumPy", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original-wordmark.svg"},
+		{"title": "Matplotlib", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-plain-wordmark.svg"},
+		{"title": "Keras", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original-wordmark.svg"},
+		{"title": "Scikit-learn", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"},
+		{"title": "Git", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg"},
+		{"title": "GitHub", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg"},
+		{"title": "Google Cloud", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original-wordmark.svg"},
+		{"title": "Bash", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"},
+		{"title": "Linux", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"},
+		{"title": "MongoDB", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"},
+		{"title": "Redis", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original-wordmark.svg"},
+		{"title": "Cassandra", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cassandra/cassandra-original-wordmark.svg"},
+		{"title": "Neo4j", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neo4j/neo4j-original-wordmark.svg"}
 	]
 }
 
