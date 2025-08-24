@@ -48,7 +48,7 @@ data_esp = {
 		{'type': 'Alumno Interno en el Departamento de Ingeniería y Tecnología de Computadores',
 		 'date': '2024 - Actualidad',
 		 'place': 'Universidad de Murcia, España',
-		 'descripcion': ['Tutelado por el Dr. José Rubén Titos.', 'Iniciación en el ámbito de la investigación científicos - Lectura y producción de "papers".', 'Participación en el desarrollo de herramientas para mejorar los recursos de una asignatura de mi propio grado.', 'Programación de utilidades para favorecer el aprendizaje automatizado.', 'Proyectos de análisis de grandes cantidades de datos de alumnos para mejorar la calidad de la asignatura.', 'Se pueden ver las actividades realizadas con detalle durante el curso 2024-25 en el informe.'],
+		 'description': ['Tutelado por el Dr. José Rubén Titos.', 'Iniciación en el ámbito de la investigación científicos - Lectura y producción de "papers".', 'Participación en el desarrollo de herramientas para mejorar los recursos de una asignatura de mi propio grado.', 'Programación de utilidades para favorecer el aprendizaje automatizado.', 'Proyectos de análisis de grandes cantidades de datos de alumnos para mejorar la calidad de la asignatura.', 'Se pueden ver las actividades realizadas con detalle durante el curso 2024-25 en el informe.'],
 		 'certificados': [
 			{'nombre': 'Nombramiento Curso 24/25', 'file': 'nombramiento_alu_interno.pdf'},
 			{'nombre': 'Informe Curso 24/25', 'file': 'informe_alu_interno_24-25.pdf'}

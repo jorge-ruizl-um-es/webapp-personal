@@ -51,10 +51,10 @@
 					<h5 class="text-uppercase text-muted mb-3">Habilidades destacadas</h6>
 
 					<ul class="fs-5 mb-3">
-						<li class="mb-3">🧠 Inteligencia Artificial y Machine Learning</li>
-						<li class="mb-3">📊 Análisis de datos y visualización</li>
-						<li class="mb-3">🛠️ Automatización con Python (ETL, scrapping, APIs)</li>
-						<li class="mb-3">🌐 Desarrollo cliente/servidor · Redes</li>
+						<li class="mb-3">Inteligencia Artificial y Machine Learning</li>
+						<li class="mb-3">Análisis de datos y visualización</li>
+						<li class="mb-3">Automatización con Python (ETL, scrapping, APIs)</li>
+						<li class="mb-3">Desarrollo cliente/servidor · Redes</li>
 					</ul>
 
 					<br>
@@ -62,15 +62,19 @@
 					<div class="d-flex flex-wrap gap-2">
 						<span class="badge rounded-pill text-bg-dark" style="font-size: 1rem; padding: 0.6em 1em;">Python</span>
 						<span class="badge rounded-pill text-bg-secondary" style="font-size: 1rem; padding: 0.6em 1em;">Pandas</span>
-						<span class="badge rounded-pill text-bg-secondary" style="font-size: 1rem; padding: 0.6em 1em;">SQL</span>
-						<span class="badge rounded-pill text-bg-secondary" style="font-size: 1rem; padding: 0.6em 1em;">Git</span>
+						<span class="badge rounded-pill text-bg-dark" style="font-size: 1rem; padding: 0.6em 1em;">SQL</span>
+						<span class="badge rounded-pill text-bg-dark" style="font-size: 1rem; padding: 0.6em 1em;">Git</span>
 						<span class="badge rounded-pill text-bg-secondary" style="font-size: 1rem; padding: 0.6em 1em;">APIs</span>
+						<span class="badge rounded-pill text-bg-dark" style="font-size: 1rem; padding: 0.6em 1em;">ML</span>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<p class="fs-5 mb-4" style="text-align: justify;">Mi objetivo es permanecer en constante crecimiento como profesional y como persona, a la par que gano experiencia en distintos ámbitos y contribuyo con mis habilidades en programación, análisis e investigación. Este sitio refleja quién soy, qué he aprendido y conseguido hasta ahora, y hacia dónde quiero dirigirme.
+		<p class="fs-5 mb-4" style="text-align: justify;">
+			Mi objetivo es permanecer en constante crecimiento como profesional y como persona, a la par que gano 
+			experiencia en distintos ámbitos y contribuyo con mis habilidades en programación, análisis e investigación. 
+			Este sitio refleja quién soy, qué he aprendido y conseguido hasta ahora, y hacia dónde quiero dirigirme.
 	  	</p>	
 	</div>
   </div>
@@ -206,7 +210,10 @@
 	<!-- Habilidades destacables -->
 	<div class="container my-5 px-5" id="habilidades">
 		<h2 class="mb-1">Habilidades destacables</h2>
-		<p class="fs-5 mb-4" style="font-size: large;">Habilidades o aptitudes que he ido adquieriendo gracias a mi formación tanto académica como autodidacta o mediante cursos.</p>
+		<p class="fs-5 mb-4" style="font-size: large;">
+			Habilidades o aptitudes que he ido adquieriendo gracias a mi formación tanto académica 
+			como autodidacta o mediante cursos.
+		</p>
 
 		<!-- Lista de cards con las habilidades -->
 		<div class="carousel-wrap" data-carousel="">
@@ -255,7 +262,42 @@
 </div>
 
 <div class="my-5" id="experiencia">
-	<h2 class="mb-5 fs-1">Formación</h2>
+	<h2 class="mb-5 fs-1">Experiencia laboral</h2>
+	<p class="fs-5 mb-4" style="font-size: large;">
+		Situaciones donde he puesto en práctica mis conocimientos o donde he desempeñado una función
+		como parte de un proyecto o empresa. Se incluye la documentación que lo verifica formalmente.
+	</p>
+
+	{% for exp in user_data['experience'] %}
+	<div class="card study-card shadow-sm border-0 mb-4">
+		<div class="card-body">
+			<h5 class="card-title mb-1" style="font-size: x-large;">{{exp.place}}</h5>
+			<div class="fw-semibold" style="font-size: large;">{{exp.type}}</div>
+			<div class="text-muted fst-italic mb-2" style="font-size: medium;">{{exp.date}}</div>
+
+			<ul class="mb-3">
+				{% for point in exp.description %}
+					<li style="font-size: 1.1rem;">{{point}}</li>
+				{% endfor %}
+			</ul>
+
+			{% if exp.certificados %}
+			<div class="card-actions">
+				{% for cert in exp.certificados %}
+					<a href="{{ url_for('static', filename='files/' ~ cert.file) }}"
+						class="btn btn-dark btn-sm me-2 mb-2" style="font-size: 1.1rem;"
+						download="">
+						{{cert.nombre}}
+					</a>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+	{% endfor %}
+
 </div>
+
+<!-- Faltan los proyectos y el contacto -->
 
 {%endblock%}
