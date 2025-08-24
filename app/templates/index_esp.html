@@ -261,6 +261,105 @@
 
 </div>
 
+<!-- ====== Franja de logos (Tech Strip) ====== -->
+<div class="tech-strip my-5" aria-label="Tecnologías y herramientas">
+  <div class="tech-strip__inner">
+    <!-- Una sola pista -->
+    <div class="tech-track">
+      {% for logo in user_data['logos'] %}
+      <div class="tech-item" title="{{ logo.title }}">
+        <img src="{{ logo.file }}"
+             alt="{{ logo.title }}" loading="lazy" height="44">
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Pista 2 (duplicada para bucle perfecto) -->
+    <div class="tech-track" aria-hidden="true">
+      {% for logo in user_data['logos'] %}
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='images/logos/' ~ logo.file) }}"
+             alt="" loading="lazy" height="44">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- CSS para que la franja sea dinámica -->
+<style>
+  .tech-strip{
+    --bg: #e9eef7;               /* color de fondo */
+	--bg2: #eef3ff;
+    --gap: 5rem;                 /* separación entre logos */
+	--logo-h: 56px;
+	--speed: 70s;
+   	
+	/* Full-bleed incluso dentro de .container */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    background: linear-gradient(90deg, var(--bg), var(--bg2) 40%, var(--bg));
+    padding: 2rem 0;         /* franja más ancha/alta */
+    overflow: hidden;
+  }
+  .tech-strip__inner{
+    display: flex;
+  }
+  .tech-track{
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap);
+    animation: tech-scroll var(--speed) linear infinite;
+    will-change: transform;
+  }
+  /* Pausa al pasar el ratón */
+  .tech-strip:hover .tech-track{ animation-play-state: paused; }
+
+  .tech-item{
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    height: calc(var(--logo-h) + 16px);  /* caja algo mayor que el logo */
+    padding: 0 .25rem;
+    opacity: .95;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+  .tech-item:hover{ transform: translateY(-2px) scale(1.03); opacity: 1; }
+
+  .tech-item img{
+    height: var(--logo-h);                /* tamaño de logo (ajústalo si quieres) */
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,.35));
+  }
+
+  /* Bucle infinito: desplaza 100% del ancho de una pista */
+  @keyframes tech-scroll{
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+  }
+
+  /* Accesibilidad: respeta “reducir movimiento” */
+  @media (prefers-reduced-motion: reduce){
+    .tech-track{ animation: none; }
+  }
+
+  /* Responsive: un poco menos de separación en pantallas estrechas */
+  @media (max-width: 576px){
+    .tech-strip{ --gap: 1.5rem; }
+    .tech-item img{ height: 36px; }
+    .tech-item{ height: 46px; }
+  }
+</style>
+
+
+<!-- ========================================= -->
+
 <div class="my-5" id="experiencia">
 	<h2 class="mb-5 fs-1">Experiencia laboral</h2>
 	<p class="fs-5 mb-4" style="font-size: large;">
@@ -297,6 +396,8 @@
 	{% endfor %}
 
 </div>
+
+
 
 <!-- Faltan los proyectos y el contacto -->
 
