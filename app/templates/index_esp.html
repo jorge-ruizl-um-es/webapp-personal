@@ -397,8 +397,53 @@
 
 </div>
 
+<!-- Sección de proyectos -->
+<div class="my-5" id="proyectos">
+	<h2 class="mb-5 fs-1">Proyectos</h2>
+	<p class="fs-5 mb-4" style="font-size: large;">Mi formación reglada, con los puntos más relevantes.</p>
 
+	<div class="carousel-wrap" data-carousel>
 
-<!-- Faltan los proyectos y el contacto -->
+		<!-- Pista desplazable -->
+		<div class="carousel-track d-flex gap-5 overflow-auto py-2 px-1">
+		{% for s in user_data['studies'] %}
+			<div class="card study-card shadow-sm border-0">
+				<div class="card-body">
+					<h5 class="mb-1">{{ s.place }}</h5>
+					<div class="fw-semibold">{{ s.type }}</div>
+					<div class="text-muted mb-2">{{ s.date }}</div>
+
+					<ul class="ps-3 mb-3">
+					{% for d in s.description %}
+						<li>{{ d }}</li>
+					{% endfor %}
+					</ul>
+
+					{% if s.certificados %}
+					<div class="card-actions">
+						{% for cert in s.certificados %}
+						<a href="{{ url_for('static', filename='files/' ~ cert) }}"
+							class="btn btn-dark btn-sm me-2 mb-2" download>
+							Certificado
+						</a>
+						{% endfor %}
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+		
+		<!-- Mostrar flechas si hay más de 3 elementos -->
+		{% if user_data['studies']|length > 3 %}
+			<div class="carousel-arrows d-none d-md-flex">
+				<button class="btn btn-outline-dark rounded-circle shadow" data-dir="left"  aria-label="Anterior">‹</button>
+				<button class="btn btn-outline-dark rounded-circle shadow" data-dir="right" aria-label="Siguiente">›</button>
+			</div>
+		{% endif %}
+
+	</div>
+
+</div>
 
 {%endblock%}

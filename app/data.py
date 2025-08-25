@@ -33,7 +33,7 @@ data_esp = {
 
 		 {'skill': 'Herramientas colaborativas y trabajo en equipo',
    		 'description': 'Trabajo constantemente con Git y Google Collab, además de contribuir en proyectos de mayor envergadura como alumno interno, o colaborar con otros de mis compañeros. Soy muy activo en GitHub.',
-		 'skill_detail': ['Git', 'GitHub', 'Google Collab', 'Docker', 'Trabajo en equipo']},
+		 'skill_detail': ['Git', 'GitHub', 'Google Collab', 'Jupyter Notebook', 'Docker', 'Trabajo en equipo']},
 
 		 {'skill': 'Manejo de Sistemas Operativos basados en Linux',
    		 'description': 'Trabajo cómodamente en entornos de Linux. Estoy acostumbrado a interactuar con la terminal y con el shell, lo que supone un aumento en mi eficiencia al realizar ciertas tareas.',
@@ -102,19 +102,29 @@ data_esp = {
    		 'date': 'Colaborador; Junio 2025 - En marcha',
 		 'description': 'Próximamente ',
 		 'link': '',
-		 'img': ''},
+		 'img': 'bash-logger.png',
+		 'technologies': ['Python', 'Bash', 'Comunicación Cliente-Servidor', 'Git']},
 
-		 {'name': '', 
-   		 'date': '',
-		 'description': '',
-		 'link': '',
-		 'img': ''},
+		 {'name': 'Análisis Estadístico de la Pokédex Nacional', 
+   		 'date': 'Autor; Enero 2025 - Junio 2025',
+		 'description': 'El proyecto consiste en un análisis de las 1025 especies de Pokémon existentes, centrándonos en atributos categóricos (nombre, tipo, etc.) y, sobre todo, numéricos (HP, ataque, defensa, etc.). El objetivo fue encontrar patrones o relaciones ocultas entre los individuos, desentrañando de forma matemática y rigurosa la lógica detrás de estos videojuegos.\nSe aplican técnicas de Análisis Estadístico y Machine Learning para el estudio del dataset, a la vez que se ofrecen conclusiones orientadas al funcionamiento del juego. Además, el estudio converge en el desarrollo de una herramienta que permite ofrecer recomendaciones automatizadas e inteligentes de Pokémon con los que completar un equipo de 6.\nTodo está documentado en un PDF cuidadosamente formateado con todo el análisis y razonamientos o conclusiones pertinentes. Se incluyen los fragmentos de código más relevantes, pudiéndose ver completo en el fichero .qmd.',
+		 'link': 'https://github.com/jorge-ruizl-um-es/pokedex-analysis.git',
+		 'img': 'pokemon.jpg',
+		 'technologies': ['R', 'LaTeX', 'Análisis Exploratorio de Datos', 'Análisis de Componentes Principales', 'Clustering Particional y Jerárquico', 'Regresión']},
 
-		 {'name': '', 
-   		 'date': '',
-		 'description': '',
-		 'link': '',
-		 'img': ''},
+		 {'name': 'Predicción de Visibilidad en los Lagos de Covadonga', 
+   		 'date': 'Autor; Junio 2025 - Agosto 2025',
+		 'description': 'Debido al problema que afrontan muchos turistas cada año al querer visitar una zona con un clima tan impredecible como pueden ser los Lagos de Covadonga (Asturias), se propone un estudio basado en datos y medidas reales para tratar de prever las condiciones de visibilidad a causa de la niebla. Se extraen datos históricos directamente de la API de la AEMET y de la observación directa de la zona para, a partir de la aplicación de diversos modelos de Machine Learning, ofrecer una predicción sobre la visibilidad en base a las previsiones introducidas para el día deseado.\nEl proyecto incluye la limpieza y tratamiento previo de los datos, la organización de los mismos, y el uso de diversas librería de Python relacionadas con Machine Learning para el entrenamiento, evaluación de resultados y comparación de distintos modelos conocidos.\n También se introduce el uso de un LLM ejecutado en local para el procesamiento previo de los datos',
+		 'link': 'https://github.com/jorge-ruizl-um-es/fog-prediction.git',
+		 'img': 'lagos.jpg',
+		 'technologies': ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'Scikit-Learn', 'Keras', 'APIs', 'Ollama']},
+
+		 {'name': 'Autocorrector de Comandos de Bash', 
+   		 'date': 'Autor; Diciembre 2024 - Abril 2024',
+		 'description': 'Esta herramienta forma parte de un proyecto de mayor envergadura en el que he colaborado. Consiste en un primer prototipo de un procesador y autocorrector de comandos de Bash. A partir de exámenes de la asignatura de Fundamentos de Computadores de la Facultad de Informática de la UMU, ofrecidos en formato de notebook de Jupyter, se extraen las soluciones correctas y las respuestas ofrecidas por cada alumno. Se va procesando pregunta por pregunta, detectando, en caso de que esté mal, el tipo de error cometido.\nSe ofrecen posteriormente distintos resúmenes en formato CSV que pueden ayudar a observar los resultados de un examen de manera directa, procesándolos en unos pocos segundos. Esta herramienta puede extenderse para usarse como un módulo autocorrector de comandos Bash que proporcione feedback automático (señalar los tipos de error cometidos sin decir al solución).',
+		 'link': 'https://github.com/jorge-ruizl-um-es/bash-autocorrector.git',
+		 'img': 'bash.png',
+		 'technologies': ['Python', 'Bash', 'Jupyter Notebook', 'JSON', 'CSV', 'Git']}
 	],
 
 	'contact': [
