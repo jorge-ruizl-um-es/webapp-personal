@@ -49,8 +49,46 @@
 	</main>
 
 	<!-- Footer -->
-	<footer class="bg-dark text-white-50 py-3 text-center mt-auto">
-		<small>© <span id="year"></span> {{user_data['name']}} {{user_data['surname']}} {{user_data['surname2']}}</small>
+	<footer class="bg-dark text-white-50 py-4 mt-auto">
+
+		<div class="container text-center">
+
+			<!-- Enlaces de contacto / redes -->
+			<nav aria-label="Redes sociales y contacto">
+				<ul class="list-inline mb-3">
+					{% for c in user_data['contact'] %}
+					{# Normalizamos el href:
+						- Si es email -> mailto:
+						- Si es Telegram sin protocolo -> https://t.me/usuario
+					#}
+					{% set href = c.url %}
+					{% if '@' in c.url and ('mailto:' not in c.url) %}
+						{% set href = 'mailto:' + c.url %}
+					{% endif %}
+					{% if c.name|lower == 'telegram' and not c.url.startswith('http') %}
+						{% set href = 'https://t.me/' + c.url.replace('t.me/', '') %}
+					{% endif %}
+
+					<li class="list-inline-item mx-2">
+						<a href="{{ href }}"
+						{% if 'mailto:' not in href %}target="_blank" rel="noopener noreferrer"{% endif %}
+						class="contact-link d-inline-flex align-items-center gap-2"
+						aria-label="{{ c.name }}">
+						<img src="{{ c.logo }}"
+							alt=""
+							class="contact-icon"
+							width="32" height="32"
+							loading="lazy">
+						<span class="visually-hidden">{{ c.name }}</span>
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</nav>
+
+			<!-- Mi nombre en pequeño + copyright -->
+			<small>© <span id="year"></span> {{user_data['name']}} {{user_data['surname']}} {{user_data['surname2']}}</small>
+		</div>
 	</footer>
 
 	<script>

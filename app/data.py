@@ -92,11 +92,94 @@ data_esp = {
 		{"title": "MongoDB", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"},
 		{"title": "Redis", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original-wordmark.svg"},
 		{"title": "Cassandra", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cassandra/cassandra-original-wordmark.svg"},
-		{"title": "Neo4j", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neo4j/neo4j-original-wordmark.svg"}
+		{"title": "Neo4j", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neo4j/neo4j-original-wordmark.svg"},
+		{"title": "Anaconda", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/anaconda/anaconda-original-wordmark.svg"},
+		{"title": "Colab", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg"}
+	],
+
+	'projects': [
+		{'name': 'Bash Logger y Quiz', 
+   		 'date': 'Colaborador; Junio 2025 - En marcha',
+		 'description': 'Próximamente ',
+		 'link': '',
+		 'img': ''},
+
+		 {'name': '', 
+   		 'date': '',
+		 'description': '',
+		 'link': '',
+		 'img': ''},
+
+		 {'name': '', 
+   		 'date': '',
+		 'description': '',
+		 'link': '',
+		 'img': ''},
+	],
+
+	'contact': [
+		{'name': 'LinkedIn', 
+   		 'logo': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg', 
+		 'url': 'https://www.linkedin.com/in/jorge-ruiz-l%C3%B3pez-6a0101321/'},
+		{'name': 'GitHub',
+   		 'logo': 'https://img.icons8.com/?size=100&id=LoL4bFzqmAa0&format=png&color=000000',
+		 'url': 'https://github.com/jorge-ruizl-um-es'},
+		{'name': 'Gmail',
+   		 'logo': 'https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000',
+		 'url': 'jorge.rulo2005@gmail.com'},
+		{'name': 'Instagram',
+   		 'logo': 'https://img.icons8.com/?size=100&id=32323&format=png&color=000000',
+		 'url': 'https://www.instagram.com/jorgeruiz_5?igsh=endnY2ZseWk0YmUz'},
+		{'name': 'Telegram',
+   		 'logo': 'https://img.icons8.com/?size=100&id=63306&format=png&color=000000',
+		 'url': 'https://t.me/jorgeruiz_5'}
 	]
 }
 
 # English
 data_eng = {
+	'name': 'Jorge',
+	'surname': 'Ruiz',
+	'surname2': 'López',
+
+	'contact': [
+		{'name': 'LinkedIn', 
+   		 'logo': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg', 
+		 'url': 'https://www.linkedin.com/in/jorge-ruiz-l%C3%B3pez-6a0101321/'},
+		{'name': 'GitHub',
+   		 'logo': 'https://img.icons8.com/?size=100&id=LoL4bFzqmAa0&format=png&color=000000',
+		 'url': 'https://github.com/jorge-ruizl-um-es'},
+		{'name': 'Gmail',
+   		 'logo': 'https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000',
+		 'url': 'jorge.rulo2005@gmail.com'},
+		{'name': 'Instagram',
+   		 'logo': 'https://img.icons8.com/?size=100&id=32323&format=png&color=000000',
+		 'url': 'https://www.instagram.com/jorgeruiz_5?igsh=endnY2ZseWk0YmUz'},
+		{'name': 'Telegram',
+   		 'logo': 'https://img.icons8.com/?size=100&id=63306&format=png&color=000000',
+		 'url': 'https://t.me/jorgeruiz_5'}
+	],
+
+	'logos': [
+		{"title": "Python", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg"},
+		{"title": "R", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rstudio/rstudio-original.svg"},
+		{"title": "Oracle", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"},
+    	{"title": "Docker", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg"},
+		{"title": "NumPy", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original-wordmark.svg"},
+		{"title": "Matplotlib", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-plain-wordmark.svg"},
+		{"title": "Keras", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original-wordmark.svg"},
+		{"title": "Scikit-learn", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"},
+		{"title": "Git", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg"},
+		{"title": "GitHub", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg"},
+		{"title": "Google Cloud", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original-wordmark.svg"},
+		{"title": "Bash", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"},
+		{"title": "Linux", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"},
+		{"title": "MongoDB", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"},
+		{"title": "Redis", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original-wordmark.svg"},
+		{"title": "Cassandra", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cassandra/cassandra-original-wordmark.svg"},
+		{"title": "Neo4j", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neo4j/neo4j-original-wordmark.svg"},
+		{"title": "Anaconda", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/anaconda/anaconda-original-wordmark.svg"},
+		{"title": "Colab", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg"}
+	]
 
 }
