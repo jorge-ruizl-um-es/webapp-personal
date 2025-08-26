@@ -112,6 +112,14 @@ data_esp = {
 		 'img': 'pokemon.jpg',
 		 'technologies': ['R', 'LaTeX', 'Análisis Exploratorio de Datos', 'Análisis de Componentes Principales', 'Clustering Particional y Jerárquico', 'Regresión']},
 
+		 {'name': 'Página web personal interactiva', 
+   		 'date': 'Autor; Agosto 2025',
+		 'description': '',
+		 'link': '',
+		 'img': 'web.png',
+		 'technologies': ['Python', 'Flask', 'HTML', 'Bootstrap', 'CSS']},
+
+
 		 {'name': 'Predicción de Visibilidad en los Lagos de Covadonga', 
    		 'date': 'Autor; Junio 2025 - Agosto 2025',
 		 'description': 'Debido al problema que afrontan muchos turistas cada año al querer visitar una zona con un clima tan impredecible como pueden ser los Lagos de Covadonga (Asturias), se propone un estudio basado en datos y medidas reales para tratar de prever las condiciones de visibilidad a causa de la niebla. Se extraen datos históricos directamente de la API de la AEMET y de la observación directa de la zona para, a partir de la aplicación de diversos modelos de Machine Learning, ofrecer una predicción sobre la visibilidad en base a las previsiones introducidas para el día deseado.\nEl proyecto incluye la limpieza y tratamiento previo de los datos, la organización de los mismos, y el uso de diversas librería de Python relacionadas con Machine Learning para el entrenamiento, evaluación de resultados y comparación de distintos modelos conocidos.\n También se introduce el uso de un LLM ejecutado en local para el procesamiento previo de los datos',
