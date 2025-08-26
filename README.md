@@ -20,10 +20,10 @@ The application is bilingual (**Spanish 🇪🇸 / English 🇬🇧**) and provi
 ## 📷 Screenshots
 
 ### 🌍 Language Selector
-![Language Selector](static/images/readme/lang_selector.png)
+![Language Selector](app/static/images/lang_selector.png)
 
 ### 🏠 Homepage (Spanish)
-![Homepage Spanish](static/images/readme/home_es.png)
+![Homepage Spanish](app/static/images/home_es.png)
 
 ---
 
