@@ -37,7 +37,7 @@
 		<!-- Columna izquierda: párrafos -->
 			<div class="col">
 				{%for par in user_data['description']%}
-					<p class="fs-5 mb-4 text-justify" style="text-align: justify;"">
+					<p class="fs-5 mb-4 text-justify" style="text-align: justify;">
 						{{par}}
 					</p>
 				{%endfor%}
@@ -224,7 +224,7 @@
 				<div class="card study-card shadow-sm border-0">
 					<div class="card-body">
 						<h5 class="mb-1">{{ s.skill }}</h5>
-						<div class="mb-2">{{ s.description }}</div>
+						<div class="mb-2" style="text-align: justify;">{{ s.description }}</div>
 
 					<ul class="ps-3 mb-3">
 					{% for d in s.skill_detail %}
@@ -244,21 +244,6 @@
 			</div>
 		{% endif %}
 	</div>
-
-	<!-- JS genérico para desplazamiento con flechas -->
-	<script>
-		document.querySelectorAll('[data-carousel]').forEach(section => {
-			const track = section.querySelector('.carousel-track');
-			section.querySelectorAll('[data-dir]').forEach(btn => {
-			btn.addEventListener('click', () => {
-				const step = track.clientWidth * 0.9;               // tamaño del scroll
-				const dir  = btn.dataset.dir === 'left' ? -1 : 1;
-				track.scrollBy({ left: dir * step, behavior: 'smooth' });
-			});
-			});
-		});
-	</script>
-
 </div>
 
 <!-- ====== Franja de logos (Tech Strip) ====== -->
@@ -400,33 +385,68 @@
 <!-- Sección de proyectos -->
 <div class="my-5" id="proyectos">
 	<h2 class="mb-5 fs-1">Proyectos</h2>
-	<p class="fs-5 mb-4" style="font-size: large;">Mi formación reglada, con los puntos más relevantes.</p>
+	<p class="fs-5 mb-4" style="font-size: large;">Algunos de mis proyectos personales más interesantes, para mostrar mi habilidad con ejemplos concretos.</p>
 
 	<div class="carousel-wrap" data-carousel>
 
 		<!-- Pista desplazable -->
 		<div class="carousel-track d-flex gap-5 overflow-auto py-2 px-1">
-		{% for s in user_data['studies'] %}
+		{% for p in user_data['projects'] %}
+			<!-- Variables -->
+			{% set cid = 'proj-' ~ loop.index %}
+			{% set hard = 300 %}
+			{% set space_at = p.description.rfind(' ', 0, hard) %}
+			{% set cut = space_at if space_at != -1 else hard %}
+			{% set has_more = (p.description|length) > cut %}
 			<div class="card study-card shadow-sm border-0">
 				<div class="card-body">
-					<h5 class="mb-1">{{ s.place }}</h5>
-					<div class="fw-semibold">{{ s.type }}</div>
-					<div class="text-muted mb-2">{{ s.date }}</div>
+					<!-- Imagen -->
+					<img src="{{ url_for('static', filename='images/' ~ p.img) }}" 
+					alt="{{p.name}}"
+					width="350" height="350" style="object-fit: cover" loading="lazy" class="mb-5">
 
-					<ul class="ps-3 mb-3">
-					{% for d in s.description %}
-						<li>{{ d }}</li>
-					{% endfor %}
-					</ul>
+					<!-- Título y subtítulo -->
+					<h5 class="mb-1">{{ p.name }}</h5>
+					<div class="text-muted mb-2">{{ p.date }}</div>
 
-					{% if s.certificados %}
+					<!-- TEASER (se ve al inicio) -->
+					<div id="{{ cid }}-preview" class="mb-2" style="text-align: justify;">
+						{{ p.description[:cut] | replace('\n','<br>') | safe }}
+						{% if has_more %}<span class="text-muted">…</span>{% endif %}
+					</div>
+
+					
+					<!-- RESTO DEL TEXTO -->
+					<div class="collapse" id="{{ cid }}">
+						<p class="mb-2" style="text-align: justify;">{{ p.description | replace('\n','<br>') | safe }}</p>
+
+						<ul class="mb-3">
+							{% for t in p.technologies %}
+								<li style="font-size: 1.1rem;">{{t}}</li>
+							{% endfor %}
+						</ul>
+					</div>
+
+					<!-- BOTÓN VER MÁS / VER MENOS -->
+					<button
+						class="btn btn-outline-dark btn-sm me-2 mb-2"
+						data-bs-toggle="collapse"
+						data-bs-target="#{{ cid }}"
+						data-preview="#{{ cid }}-preview"
+						aria-expanded="false"
+						aria-controls="{{ cid }}"
+						data-expand-text="Ver más"
+						data-collapse-text="Ver menos">
+						Ver más
+					</button>
+
+					{% if p.link %}
 					<div class="card-actions">
-						{% for cert in s.certificados %}
-						<a href="{{ url_for('static', filename='files/' ~ cert) }}"
-							class="btn btn-dark btn-sm me-2 mb-2" download>
-							Certificado
+						<a href="{{ p.link }}"
+							class="btn btn-dark btn-sm me-2 mb-2" 
+							target="_blank" rel="noopener noreferrer">
+							Enlace al proyecto
 						</a>
-						{% endfor %}
 					</div>
 					{% endif %}
 				</div>
@@ -435,15 +455,67 @@
 		</div>
 		
 		<!-- Mostrar flechas si hay más de 3 elementos -->
-		{% if user_data['studies']|length > 3 %}
+		{% if user_data['projects']|length > 3 %}
 			<div class="carousel-arrows d-none d-md-flex">
 				<button class="btn btn-outline-dark rounded-circle shadow" data-dir="left"  aria-label="Anterior">‹</button>
 				<button class="btn btn-outline-dark rounded-circle shadow" data-dir="right" aria-label="Siguiente">›</button>
 			</div>
 		{% endif %}
-
 	</div>
 
 </div>
+
+<!-- CSS para forzar el formato cuadrado de las fotos en los proyectos -->
+<style>
+	.project-thumb{
+	width: 350px;              /* ajusta el tamaño a tu gusto */
+	height: 350px;
+	object-fit: cover;        /* recorta para mantener el encuadre */
+	border-radius: 0;         /* 0 = cuadrado perfecto */
+	flex: 0 0 auto;
+	}
+	@media (max-width: 576px){
+	.project-thumb{ width: 64px; height: 64px; }
+	}
+</style>
+
+<!-- JS genérico para desplazamiento con flechas -->
+<script>
+	document.querySelectorAll('[data-carousel]').forEach(section => {
+		const track = section.querySelector('.carousel-track');
+		section.querySelectorAll('[data-dir]').forEach(btn => {
+		btn.addEventListener('click', () => {
+			const step = track.clientWidth * 0.9;               // tamaño del scroll
+			const dir  = btn.dataset.dir === 'left' ? -1 : 1;
+			track.scrollBy({ left: dir * step, behavior: 'smooth' });
+		});
+		});
+	});
+</script>
+
+<!-- JS para expandir el text -->
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+document.querySelectorAll('[data-bs-toggle="collapse"][data-preview]').forEach(btn => {
+	const targetSel  = btn.getAttribute('data-bs-target');
+	const previewSel = btn.getAttribute('data-preview');
+	const target  = document.querySelector(targetSel);
+	const preview = document.querySelector(previewSel);
+	const more = btn.getAttribute('data-expand-text')   || 'Ver más';
+	const less = btn.getAttribute('data-collapse-text') || 'Ver menos';
+
+	const sync = () => {
+	const open = target.classList.contains('show');
+	btn.textContent = open ? less : more;
+	if (preview) preview.classList.toggle('d-none', open); // oculta teaser al expandir
+	};
+
+	sync();                            // estado inicial
+	target.addEventListener('shown.bs.collapse',  sync);
+	target.addEventListener('hidden.bs.collapse', sync);
+});
+});
+</script>
+
 
 {%endblock%}
