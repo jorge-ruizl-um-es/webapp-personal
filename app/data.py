@@ -114,8 +114,8 @@ data_esp = {
 
 		 {'name': 'Página web personal interactiva', 
    		 'date': 'Autor; Agosto 2025',
-		 'description': '',
-		 'link': '',
+		 'description': 'Este proyecto es una aplicación web personal desarrollada con Flask que funciona como un currículum interactivo y bilingüe (español e inglés). A través de plantillas HTML con Bootstrap y datos almacenados en diccionarios, la web muestra información académica, experiencia, proyectos, habilidades, idiomas y enlaces de contacto.\nIncluye una página inicial para seleccionar el idioma, secciones organizadas y dinámicas (como carruseles para estudios o habilidades) y la posibilidad de descargar el CV en PDF, ofreciendo una carta de presentación moderna y navegable para mostrar mi trayectoria profesional y personal.\nSe trata de un primer proyecto sencillo para iniciarme en la programación de aplicaciones web, combinando aspectos básicos del diseño y desarrollo tanto en FrontEnd como en BackEnd.',
+		 'link': 'https://github.com/jorge-ruizl-um-es/webapp-personal.git',
 		 'img': 'web.png',
 		 'technologies': ['Python', 'Flask', 'HTML', 'Bootstrap', 'CSS']},
 
