@@ -64,7 +64,7 @@ data_esp = {
 		{'type': 'Bachillerato en Ciencias',
 		 'date': '2021 - 2023',
 		 'place': 'IES Ramón Arcas Meca, Lorca (Murcia)',
-		 'description': ['Nota media de 10.', 'Graduado con Mención Honorífica en toda la etapa.', 'Premiado en la Olimpiada de Física (Universidad de Murcia) - 8º puesto.', 'Participación en talleres de debate y de música.'],
+		 'description': ['Nota media de 10.', 'Nota de admisión final en la EBAU de 13.69/14','Graduado con Mención Honorífica en toda la etapa.', 'Premiado en la Olimpiada de Física (Universidad de Murcia) - 8º puesto.', 'Participación en talleres de debate y de música.'],
 		 'certificados': ['informe_alu_interno.pdf']},
 	],
 
@@ -119,7 +119,6 @@ data_esp = {
 		 'img': 'web.png',
 		 'technologies': ['Python', 'Flask', 'HTML', 'Bootstrap', 'CSS']},
 
-
 		 {'name': 'Predicción de Visibilidad en los Lagos de Covadonga', 
    		 'date': 'Autor; Junio 2025 - Agosto 2025',
 		 'description': 'Debido al problema que afrontan muchos turistas cada año al querer visitar una zona con un clima tan impredecible, se propone un estudio basado en datos y medidas reales para tratar de prever las condiciones de visibilidad a causa de la niebla. Se extraen datos históricos directamente de la API de la AEMET y de la observación directa de la zona para, a partir de la aplicación de diversos modelos de Machine Learning, ofrecer una predicción sobre la visibilidad en base a las previsiones introducidas para el día deseado. Se incluye el uso de un LLM ejecutado en local para ayudar con un aspecto de la limpieza y preparación de los datos.',
@@ -128,7 +127,7 @@ data_esp = {
 		 'technologies': ['Python', 'Pandas', 'Matplotlib', 'Scikit-Learn', 'Keras', 'Ollama']},
 
 		 {'name': 'Autocorrector de Comandos de Bash', 
-   		 'date': 'Autor; Diciembre 2024 - Abril 2024',
+   		 'date': 'Autor; Diciembre 2024 - Abril 2025',
 		 'description': 'Esta herramienta forma parte de un proyecto de mayor envergadura en el que he colaborado. Consiste en un primer prototipo de un procesador y autocorrector de comandos de Bash. A partir de exámenes de la asignatura de Fundamentos de Computadores ofrecidos en formato de notebook de Jupyter, se extraen las soluciones correctas y las respuestas ofrecidas por cada alumno. Se va procesando pregunta por pregunta, detectando, en caso de que esté mal, el tipo de error cometido. Se ofrecen distintos resúmenes en formato CSV para observar los resultados de un examen de manera directa.',
 		 'link': 'https://github.com/jorge-ruizl-um-es/bash-autocorrector.git',
 		 'img': 'bash.png',
@@ -159,6 +158,131 @@ data_eng = {
 	'name': 'Jorge',
 	'surname': 'Ruiz',
 	'surname2': 'López',
+
+	'description': [
+		'I am passionate about Computer Science and Data Analysis oriented to the development of tools that can transform our understanding of the world. I am gaining experience in areas such as artificial intelligence, large-scale data analysis and processing, as well as the development of Python scripts for task automation. Apart from that, I serve as a student assistant in the Department of Computer Engineering and Technology at my university',
+
+		'Furthermore, I work with applications that follow a client-server communication schema in Python, which has provided me with solid experience in the field of computer networking. On a personal level, I am highly interested in cybersecurity and I am currently pursuing self-directed training in this domain.'
+	],
+
+	'education': [
+		{'skill': 'Programming in various languages',
+   		 'description': 'My main languages are Python and R, but I have also trained independently in C and C++. I focus on data cleaning, processing and analysis, task automation and application development',
+		 'skill_detail': ['Python', 'R', 'C', 'C++', 'HTML']},
+
+		{'skill': 'Wide knowledge of Databases',
+   		 'description': "I've worked with various types of databases, both SQL and the main NoSQL systems currently in use. I have integrated them into projects and Python applications.",
+		 'skill_detail': ['SQL (Oracle)', 'Neo4j', 'MongoDB', 'Redis', 'HBase', 'Cassandra']},
+
+		 {'skill': 'Data Cleaning and Analysis',
+   		 'description': 'I am able to extract and format data from different type of files, as well a applying analytical techniques for obtaining metrics, visualizations and insights that support decision-making.',
+		 'skill_detail': ['Pandas', 'Matplotlib', 'Seaborn', 'R', 'JSON', 'CSV', 'Excel']},
+
+		 {'skill': 'Mathematical and Statistical Analysis',
+   		 'description': 'My academic background includes experience in mathematics, which has strengthened my analytical thinking and discipline; in addition to providing a solid foundation in statistics.',
+		 'skill_detail': ['Numpy', 'Simpy', 'Algebra', 'Optimization', 'Calculus', 'LaTeX', 'Markdown', 'Statistics']},
+
+		 {'skill': 'Machine Learning and Artificial Intelligence',
+   		 'description': 'I bring significant expertise in the development and application of models based on previously processed data, enabling predictions and supporting decision-making.',
+		 'skill_detail': ['Scikit-Learn', 'Keras', 'Tensorflow', 'Python + R']},
+
+		 {'skill': 'Colaborative tools and Teamwork',
+   		 'description': 'I constantly work on Git and Google Collab, as well as contributing to larger scale projects as a student assistant or in collaboration with classmates. In fact, I am genuinely active on GitHub',
+		 'skill_detail': ['Git', 'GitHub', 'Google Collab', 'Jupyter Notebook', 'Docker', 'Teamwork']},
+
+		 {'skill': 'Linux-based Operating Systems Management',
+   		 'description': 'I am comfortable working on Linux environments.  I am used to interacting with the terminal and shell, which increases my efficiency when performing certain tasks.',
+		 'skill_detail': ['Bash', 'RegEx', 'Shell Scripting', 'SSH y remote administration', 'Permissions management']},
+
+		 {'skill': 'Introduction to Cybersecurity',
+   		 'description': "Despite the fact that it is not part of my formal studies, cybersecurity is a field that has sparked my interest, and I am currently learning on my own. I take part in activities organised by my university's cybersecurity and ethical hacking club.",
+		 'skill_detail': ['Local File Inclusion', 'Cracking', 'File Upload Attacks', 'SQL Injection', 'Networking']}
+	],
+
+	'experience': [
+		{'type': 'Student Assistant in the Department of Computer Engineering and Technology',
+		 'date': '2024 - Present',
+		 'place': 'University of Murcia, Spain',
+		 'description': [
+			 'Supervised by Dr. José Rubén Titos.', 
+			 'Introduction to scientific reasearch - reading and producing academic papers in various contexts.',
+			 'Participation in the development of tools to enhance the resources of a course within my own degree program.',
+			 'Programming several utilities to strengthen automated and individual learning.',
+			 'Large-scale student data analysis projects aimed at improving course quality.',
+			 'A detailed report of the activities carried out during the 2024-25 academic year is available.'
+			],
+		 'certificados': [
+			{'nombre': 'Nombramiento Curso 24/25', 'file': 'nombramiento_alu_interno.pdf'},
+			{'nombre': 'Informe Curso 24/25', 'file': 'informe_alu_interno_24-25.pdf'}
+		 ]}
+	],
+
+	'studies': [
+		{'type': "Bachelor's Degree in Data Science and Engineering",
+		 'date': '2023 - Present',
+		 'place': 'University of Murcia, Spain',
+		 'description': [
+			 'Advanced data analysis tools, statistics, machine learning, and data processing.',
+			 'Project-based learning to put theoretical content into practice.',
+			 'Completion of both individual and colaborative tasks and practical projects.',
+			 'Ongoing - Current GPA: 9.8 with 19 courses awarded Honors Distinction.'
+			]},
+		
+		{'type': 'High School Diploma in Science',
+		 'date': '2021 - 2023',
+		 'place': 'IES Ramón Arcas Meca, Lorca (Murcia)',
+		 'description': [
+			 'Final GPA: 10/10.',
+			 'Final university entrance grade: 13.69/14',
+			 'Graduated with Honors Distinction throughout the entire stage.', 
+			 'Awarded 8th place in the Physics Olympiad (University of Murcia).', 
+			 'Participation in debate and music clubs.'],
+		 'certificados': ['PENDING']},
+	],
+
+	'languages': [
+		{'lang': "Spanish", "level": "Native Speaker", "certificate": ""},
+		{'lang': "English", "level": "Advanced C1", "certificate": "AÑADIR"},  #"english_c1.pdf" dentro de static/files
+		{'lang': "French", "level": "Medium-high B2", "certificate": "AÑADIR"},
+		{'lang': "Japanese", "level": "Basic", "certificate": ""}
+	],
+
+	'projects': [
+		{'name': 'Bash Logger and Quiz', 
+   		 'date': 'Colaborator; June 2025 - Ongoing',
+		 'description': 'Coming soon ',
+		 'link': '',
+		 'img': 'bash-logger.png',
+		 'technologies': ['Python', 'Bash', 'Client-Server Communication', 'Git']},
+
+		 {'name': 'Statistical Analysis of the National Pokédex', 
+   		 'date': 'Author; January 2025 - June 2025',
+		 'description': 'Analysis of the 1,025 existing Pokémon species, using variables such as HP, attack or defense. The goal was to uncover hidden patterns or relationships among individuals, rigorously and mathematically explaining the logic behind these games. Statistical Analysis and Machine Learning techniques were applied to study the dataset, with insights drawn about game mechanics. The study also resulted in the development of an intelligent recommendation system to automatically suggest Pokémon for building a team.',
+		 'link': 'https://github.com/jorge-ruizl-um-es/pokedex-analysis.git',
+		 'img': 'pokemon.jpg',
+		 'technologies': ['R', 'LaTeX', 'Exploratory Data Analysis', 'Principal Component Analysis', 'Partitional and Hierarchical Clustering', 'Regression']},
+
+		 {'name': 'Interactive Personal Website', 
+   		 'date': 'Author; August 2025',
+		 'description': 'Personal web application developed with Flask, designed as an interactive and bilingual curriculum (Spanish-English). It includes a landing page for language selection, structured and dynamic sections (such as carousels for studies or skills) and offering the functionality of downloading my CV in PDF format. This project serves as a modern and navigable personal presentationm showcasing my academic and professional journey. It was conceived as an introductory project to web application development.',
+		 'link': 'https://github.com/jorge-ruizl-um-es/webapp-personal.git',
+		 'img': 'web.png',
+		 'technologies': ['Python', 'Flask', 'HTML', 'Bootstrap', 'CSS']},
+
+		 {'name': 'Visibility Prediction in the Lakes of Covadonga', 
+   		 'date': 'Author; June 2025 - August 2025',
+		 'description': 'Given the difficulties faced by many tourists each year when visiting an area with highly unpredictable weather like this one, the project proposes a study based on real data and measurements to predict visibility conditions caused by fog. Historical data were extracted directly from the AEMET API and on-site observations. Several Machine Learning models were applied to forecast visibility based on the provided weather conditions for a chosen day. The project also incorporates the use of a locally deployed LLM to support data cleaning and preprocessing.',
+		 'link': 'https://github.com/jorge-ruizl-um-es/fog-prediction.git',
+		 'img': 'lagos.jpg',
+		 'technologies': ['Python', 'Pandas', 'Matplotlib', 'Scikit-Learn', 'Keras', 'Ollama']},
+
+		 {'name': 'Bash Commands Autocorrector', 
+   		 'date': 'Author; December 2024 - April 2025',
+		 'description': "This tool has finally been integrated in a larger-scale project in which I have taken part. It is an early prototype of a Bash command processor and autocorrector. Based on exam materials from the Computer Fundamentals course (provided in Jupyter Notebook format), the tool extracts both the correct solutions and the students' response. Each question is processed to detect errors and classify their type (i.e: the part of a student's command which is wrong). The system generates various CSV summaries to provide a direct overview of the exam results within seconds",
+		 'link': 'https://github.com/jorge-ruizl-um-es/bash-autocorrector.git',
+		 'img': 'bash.png',
+		 'technologies': ['Python', 'Bash', 'Jupyter Notebook', 'JSON', 'CSV', 'Git']}
+	],
 
 	'contact': [
 		{'name': 'LinkedIn', 
