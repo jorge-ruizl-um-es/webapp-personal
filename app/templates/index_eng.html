@@ -4,9 +4,476 @@
 
 {%block content%}
 
-<div class="container text-center mt-3">
-	<h1>Jorge Ruiz López</h1>
-	<h3>My CV</h3>
+<div class="text-center">
+  <img src="{{ url_for('static', filename='images/perfil_malo2.jpeg') }}" 
+  	class="img-fluid rounded-circle" alt="Profile Photo" style="width: 275px; height: 275px; object-fit: cover;">
 </div>
 
+<div class="container text-center mt-4">
+	<h1 style="font-family: 'Poppins', sans-serif; font-size: 3.5rem; font-weight: 300;">
+		Jorge Ruiz López
+	</h1>
+	<br>
+	<a href="{{ url_for('static', filename='files/CV.pdf') }}" 
+   		class="btn btn-dark btn-lg mx-auto text-center bg-dark text-white"
+   		download>
+  		Download CV
+	</a>
+</div>
+
+<!-- About Me Section -->
+<div class="container mt-5">
+  <div class="card shadow-lg border-0 rounded-3">
+	<div class="card-body mx-4">
+	  <h2 class="card-title text-center mb-4">About Me</h2>
+	  <h4>Welcome to my personal space!</h4>
+	  <p class="fs-5 mb-4" style="text-align: justify;">I am Jorge Ruiz López, a third-year student of Data Science and Engineering at the University of Murcia. 
+		  Here you will find part of my academic, personal, and professional background. I will keep updating this space
+		  with new projects I develop and achievements I obtain throughout my career.
+	  </p>
+
+	  <!-- Two columns -->
+		<div class="row row-cols-1 row-cols-lg-2 g-5">
+		<!-- Left column: paragraphs -->
+			<div class="col">
+				{%for par in user_data['description']%}
+					<p class="fs-5 mb-4 text-justify" style="text-align: justify;">
+						{{par}}
+					</p>
+				{%endfor%}
+			</div>
+
+		<!-- Right column: skills list -->
+			<div class="col px-4, py-4">
+				<div class="about-skills">
+					<br>
+
+					<h5 class="text-uppercase text-muted mb-3">Highlighted Skills</h5>
+
+					<ul class="fs-5 mb-3">
+						<li class="mb-3">Artificial Intelligence and Machine Learning</li>
+						<li class="mb-3">Data Analysis and Visualization</li>
+						<li class="mb-3">Automation with Python (ETL, scraping, APIs)</li>
+						<li class="mb-3">Client–Server Development · Networking</li>
+					</ul>
+
+					<br>
+
+					<div class="d-flex flex-wrap gap-2">
+						<span class="badge rounded-pill text-bg-dark" style="font-size: 1rem; padding: 0.6em 1em;">Python</span>
+						<span class="badge rounded-pill text-bg-secondary" style="font-size: 1rem; padding: 0.6em 1em;">Pandas</span>
+						<span class="badge rounded-pill text-bg-dark" style="font-size: 1rem; padding: 0.6em 1em;">SQL</span>
+						<span class="badge rounded-pill text-bg-dark" style="font-size: 1rem; padding: 0.6em 1em;">Git</span>
+						<span class="badge rounded-pill text-bg-secondary" style="font-size: 1rem; padding: 0.6em 1em;">APIs</span>
+						<span class="badge rounded-pill text-bg-dark" style="font-size: 1rem; padding: 0.6em 1em;">ML</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<p class="fs-5 mb-4" style="text-align: justify;">
+			My goal is to continue growing both as a professional and as a person, while gaining 
+			experience in different areas and contributing with my programming, analytical, and research skills. 
+			This site reflects who I am, what I have learned and achieved so far, and where I want to go next.
+	  	</p>	
+	</div>
+  </div>
+</div>
+
+<br>
+
+<!-- Education Section -->
+<div class="my-5" id="formacion">
+	<h2 class="mb-5 fs-1">Education</h2>
+
+	<!-- Languages -->
+	<div class="mb-5 px-5" id="idiomas">
+		<h2 class="h3">Languages</h2>
+		<p class="fs-5 mb-4">These are the languages I am proficient in, with which I feel comfortable speaking, writing, and listening, along with my level of mastery in each one.</p>
+
+		<ol class="list-group list-group-numbered">
+			{% for idioma in user_data['languages'] %}
+				<li class="list-group-item py-3" style="font-size: large;">
+					<div class="d-flex justify-content-between align-items-center">
+						<div>
+							<div class="fw-semibold">
+								{{idioma['lang']}}
+							</div>
+
+							<small class="text-muted">
+								{{idioma['level']}}
+							</small>
+						</div>
+						
+						{% if idioma['certificate'] %}
+							<a href="{{url_for('static', filename='files/' ~ idioma['certificate'])}}"
+								class="badge rounded-pill text-bg-dark text-decoration-none" download>
+								Certificate
+							</a>
+						{%endif%}
+					</div>
+				</li>
+			{%endfor%}
+		</ol>
+	</div>
+
+
+	<!-- Studies -->
+	<div class="container my-5 px-5" id="educacion">
+		<h2 class="mb-1">Academic Background</h2>
+		<p class="fs-5 mb-4" style="font-size: large;">My formal education, with the most relevant highlights.</p>
+		
+		<!-- CSS for carousel -->
+		 <style>
+			.carousel-wrap{ position:relative; isolation:isolate; } /* capa propia */
+			.carousel-track{ scroll-snap-type:x mandatory; position:relative; z-index:0; }
+			.carousel-track > .study-card{
+				scroll-snap-align:start;
+				min-width: 380px; max-width: 440px; /* puedes ajustar tamaño */
+				border-radius:.75rem;
+			}
+			.study-card{ transition:transform .2s, box-shadow .2s; }
+			.study-card:hover{ transform:translateY(-4px); box-shadow:0 .75rem 1.25rem rgba(0,0,0,.15); }
+
+			/* Flechas en overlay por encima del carrusel */
+			.carousel-arrows{
+				position:absolute; inset:0;
+				display:flex; align-items:center; justify-content:space-between;
+				padding:0 .25rem;
+				pointer-events:none;  /* la capa ignora clicks */
+				z-index:10;
+			}
+			.carousel-arrows .btn{ pointer-events:auto; } /* los botones sí */
+
+			/* === Certificados: solo visibles en hover (desktop) === */
+			.card-actions{ 
+				opacity:0; 
+				visibility:hidden; 
+				transition:opacity .2s ease, visibility .2s ease;
+			}
+			@media (hover:hover){
+				.study-card:hover .card-actions,
+				.study-card:focus-within .card-actions{
+					opacity:1; visibility:visible;
+			}
+			}
+			/* En dispositivos sin hover (móvil/tablet táctil), siempre visibles */
+			@media (hover:none){
+				.card-actions{ opacity:1; visibility:visible; }
+			}
+		</style>
+
+		<div class="carousel-wrap" data-carousel>
+			<div class="carousel-track d-flex gap-5 overflow-auto py-2 px-1">
+			{% for s in user_data['studies'] %}
+				<div class="card study-card shadow-sm border-0">
+					<div class="card-body">
+						<h5 class="mb-1">{{ s.place }}</h5>
+						<div class="fw-semibold">{{ s.type }}</div>
+						<div class="text-muted mb-2">{{ s.date }}</div>
+
+						<ul class="ps-3 mb-3">
+						{% for d in s.description %}
+							<li>{{ d }}</li>
+						{% endfor %}
+						</ul>
+
+						{% if s.certificados %}
+						<div class="card-actions">
+							{% for cert in s.certificados %}
+							<a href="{{ url_for('static', filename='files/' ~ cert) }}"
+								class="btn btn-dark btn-sm me-2 mb-2" download>
+								Certificate
+							</a>
+							{% endfor %}
+						</div>
+						{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+			</div>
+			
+			{% if user_data['studies']|length > 3 %}
+      			<div class="carousel-arrows d-none d-md-flex">
+        			<button class="btn btn-outline-dark rounded-circle shadow" data-dir="left"  aria-label="Previous">‹</button>
+        			<button class="btn btn-outline-dark rounded-circle shadow" data-dir="right" aria-label="Next">›</button>
+      			</div>
+    		{% endif %}
+		</div>
+	</div>
+
+	
+	<!-- Key Skills -->
+	<div class="container my-5 px-5" id="habilidades">
+		<h2 class="mb-1">Key Skills</h2>
+		<p class="fs-5 mb-4" style="font-size: large;">
+			Skills and aptitudes I have acquired through both academic training and self-study or online courses.
+		</p>
+
+		<div class="carousel-wrap" data-carousel="">
+			<div class="carousel-track d-flex gap-5 overflow-auto py-2 px-1">
+			{% for s in user_data['education'] %}
+				<div class="card study-card shadow-sm border-0">
+					<div class="card-body">
+						<h5 class="mb-1">{{ s.skill }}</h5>
+						<div class="mb-2" style="text-align: justify;">{{ s.description }}</div>
+
+					<ul class="ps-3 mb-3">
+					{% for d in s.skill_detail %}
+						<li>{{ d }}</li>
+					{% endfor %}
+					</ul>
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+
+		{% if user_data['education']|length > 3 %}
+			<div class="carousel-arrows d-none d-md-flex">
+				<button class="btn btn-outline-dark rounded-circle shadow" data-dir="left"  aria-label="Previous">‹</button>
+				<button class="btn btn-outline-dark rounded-circle shadow" data-dir="right" aria-label="Next">›</button>
+			</div>
+		{% endif %}
+	</div>
+</div>
+
+<!-- ====== Tech Strip ====== -->
+<div class="tech-strip my-5" aria-label="Technologies and tools">
+  <div class="tech-strip__inner">
+    <div class="tech-track">
+      {% for logo in user_data['logos'] %}
+      <div class="tech-item" title="{{ logo.title }}">
+        <img src="{{ logo.file }}"
+             alt="{{ logo.title }}" loading="lazy" height="44">
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="tech-track" aria-hidden="true">
+      {% for logo in user_data['logos'] %}
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='images/logos/' ~ logo.file) }}"
+             alt="" loading="lazy" height="44">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- CSS for dinamism in the strip -->
+<style>
+  .tech-strip{
+    --bg: #e9eef7;               /* color de fondo */
+	--bg2: #eef3ff;
+    --gap: 5rem;                 /* separación entre logos */
+	--logo-h: 56px;
+	--speed: 70s;
+   	
+	/* Full-bleed incluso dentro de .container */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    background: linear-gradient(90deg, var(--bg), var(--bg2) 40%, var(--bg));
+    padding: 2rem 0;         /* franja más ancha/alta */
+    overflow: hidden;
+  }
+  .tech-strip__inner{
+    display: flex;
+  }
+  .tech-track{
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap);
+    animation: tech-scroll var(--speed) linear infinite;
+    will-change: transform;
+  }
+  /* Pausa al pasar el ratón */
+  .tech-strip:hover .tech-track{ animation-play-state: paused; }
+
+  .tech-item{
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    height: calc(var(--logo-h) + 16px);  /* caja algo mayor que el logo */
+    padding: 0 .25rem;
+    opacity: .95;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+  .tech-item:hover{ transform: translateY(-2px) scale(1.03); opacity: 1; }
+
+  .tech-item img{
+    height: var(--logo-h);                /* tamaño de logo (ajústalo si quieres) */
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,.35));
+  }
+
+  /* Bucle infinito: desplaza 100% del ancho de una pista */
+  @keyframes tech-scroll{
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+  }
+
+  /* Accesibilidad: respeta “reducir movimiento” */
+  @media (prefers-reduced-motion: reduce){
+    .tech-track{ animation: none; }
+  }
+
+  /* Responsive: un poco menos de separación en pantallas estrechas */
+  @media (max-width: 576px){
+    .tech-strip{ --gap: 1.5rem; }
+    .tech-item img{ height: 36px; }
+    .tech-item{ height: 46px; }
+  }
+</style>
+<!-- ============================= -->
+
+<div class="my-5" id="experiencia">
+	<h2 class="mb-5 fs-1">Work Experience</h2>
+	<p class="fs-5 mb-4" style="font-size: large;">
+		Situations where I have applied my knowledge or taken on roles as part of a project or institution. Includes supporting documentation.
+	</p>
+
+	{% for exp in user_data['experience'] %}
+	<div class="card study-card shadow-sm border-0 mb-4">
+		<div class="card-body">
+			<h5 class="card-title mb-1" style="font-size: x-large;">{{exp.place}}</h5>
+			<div class="fw-semibold" style="font-size: large;">{{exp.type}}</div>
+			<div class="text-muted fst-italic mb-2" style="font-size: medium;">{{exp.date}}</div>
+
+			<ul class="mb-3">
+				{% for point in exp.description %}
+					<li style="font-size: 1.1rem;">{{point}}</li>
+				{% endfor %}
+			</ul>
+
+			{% if exp.certificados %}
+			<div class="card-actions">
+				{% for cert in exp.certificados %}
+					<a href="{{ url_for('static', filename='files/' ~ cert.file) }}"
+						class="btn btn-dark btn-sm me-2 mb-2" style="font-size: 1.1rem;"
+						download="">
+						{{cert.nombre}}
+					</a>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+	{% endfor %}
+
+</div>
+
+<!-- Projects Section -->
+<div class="my-5" id="proyectos">
+	<h2 class="mb-5 fs-1">Projects</h2>
+	<p class="fs-5 mb-4" style="font-size: large;">Some of my most relevant personal projects, showcasing my skills with concrete examples.</p>
+
+	<div class="carousel-wrap" data-carousel>
+		<div class="carousel-track d-flex gap-5 overflow-auto py-2 px-1">
+		{% for p in user_data['projects'] %}
+			{% set cid = 'proj-' ~ loop.index %}
+			{% set hard = 300 %}
+			{% set space_at = p.description.rfind(' ', 0, hard) %}
+			{% set cut = space_at if space_at != -1 else hard %}
+			{% set has_more = (p.description|length) > cut %}
+			<div class="card study-card shadow-sm border-0">
+				<div class="card-body">
+					<img src="{{ url_for('static', filename='images/' ~ p.img) }}" 
+					alt="{{p.name}}"
+					width="350" height="350" style="object-fit: cover" loading="lazy" class="mb-5">
+
+					<h5 class="mb-1">{{ p.name }}</h5>
+					<div class="text-muted mb-2">{{ p.date }}</div>
+
+					<div id="{{ cid }}-preview" class="mb-2" style="text-align: justify;">
+						{{ p.description[:cut] | replace('\n','<br>') | safe }}
+						{% if has_more %}<span class="text-muted">…</span>{% endif %}
+					</div>
+
+					<div class="collapse" id="{{ cid }}">
+						<p class="mb-2" style="text-align: justify;">{{ p.description | replace('\n','<br>') | safe }}</p>
+
+						<ul class="mb-3">
+							{% for t in p.technologies %}
+								<li style="font-size: 1.1rem;">{{t}}</li>
+							{% endfor %}
+						</ul>
+					</div>
+
+					<button
+						class="btn btn-outline-dark btn-sm me-2 mb-2"
+						data-bs-toggle="collapse"
+						data-bs-target="#{{ cid }}"
+						data-preview="#{{ cid }}-preview"
+						aria-expanded="false"
+						aria-controls="{{ cid }}"
+						data-expand-text="See more"
+						data-collapse-text="See less">
+						See more
+					</button>
+
+					{% if p.link %}
+					<div class="card-actions">
+						<a href="{{ p.link }}"
+							class="btn btn-dark btn-sm me-2 mb-2" 
+							target="_blank" rel="noopener noreferrer">
+							Project Link
+						</a>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+		
+		{% if user_data['projects']|length > 3 %}
+			<div class="carousel-arrows d-none d-md-flex">
+				<button class="btn btn-outline-dark rounded-circle shadow" data-dir="left"  aria-label="Previous">‹</button>
+				<button class="btn btn-outline-dark rounded-circle shadow" data-dir="right" aria-label="Next">›</button>
+			</div>
+		{% endif %}
+	</div>
+</div>
+
+<script>
+	document.querySelectorAll('[data-carousel]').forEach(section => {
+		const track = section.querySelector('.carousel-track');
+		section.querySelectorAll('[data-dir]').forEach(btn => {
+		btn.addEventListener('click', () => {
+			const step = track.clientWidth * 0.9;               
+			const dir  = btn.dataset.dir === 'left' ? -1 : 1;
+			track.scrollBy({ left: dir * step, behavior: 'smooth' });
+		});
+		});
+	});
+</script>
+
+<!-- JS for text expanding -->
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+document.querySelectorAll('[data-bs-toggle="collapse"][data-preview]').forEach(btn => {
+	const targetSel  = btn.getAttribute('data-bs-target');
+	const previewSel = btn.getAttribute('data-preview');
+	const target  = document.querySelector(targetSel);
+	const preview = document.querySelector(previewSel);
+	const more = btn.getAttribute('data-expand-text')   || 'Ver más';
+	const less = btn.getAttribute('data-collapse-text') || 'Ver menos';
+
+	const sync = () => {
+	const open = target.classList.contains('show');
+	btn.textContent = open ? less : more;
+	if (preview) preview.classList.toggle('d-none', open); 
+	};
+
+	sync();                          
+	target.addEventListener('shown.bs.collapse',  sync);
+	target.addEventListener('hidden.bs.collapse', sync);
+});
+});
+</script>
 {%endblock%}

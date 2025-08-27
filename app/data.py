@@ -212,8 +212,8 @@ data_eng = {
 			 'A detailed report of the activities carried out during the 2024-25 academic year is available.'
 			],
 		 'certificados': [
-			{'nombre': 'Nombramiento Curso 24/25', 'file': 'nombramiento_alu_interno.pdf'},
-			{'nombre': 'Informe Curso 24/25', 'file': 'informe_alu_interno_24-25.pdf'}
+			{'nombre': 'Appointment Year 24/25', 'file': 'nombramiento_alu_interno.pdf'},
+			{'nombre': 'Report Year 24/25', 'file': 'informe_alu_interno_24-25.pdf'}
 		 ]}
 	],
 

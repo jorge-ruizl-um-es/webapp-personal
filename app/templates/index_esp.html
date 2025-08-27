@@ -463,27 +463,13 @@
 
 </div>
 
-<!-- CSS para forzar el formato cuadrado de las fotos en los proyectos -->
-<style>
-	.project-thumb{
-	width: 350px;              /* ajusta el tamaño a tu gusto */
-	height: 350px;
-	object-fit: cover;        /* recorta para mantener el encuadre */
-	border-radius: 0;         /* 0 = cuadrado perfecto */
-	flex: 0 0 auto;
-	}
-	@media (max-width: 576px){
-	.project-thumb{ width: 64px; height: 64px; }
-	}
-</style>
-
-<!-- JS genérico para desplazamiento con flechas -->
+<!-- JS for arrow displacement -->
 <script>
 	document.querySelectorAll('[data-carousel]').forEach(section => {
 		const track = section.querySelector('.carousel-track');
 		section.querySelectorAll('[data-dir]').forEach(btn => {
 		btn.addEventListener('click', () => {
-			const step = track.clientWidth * 0.9;               // tamaño del scroll
+			const step = track.clientWidth * 0.9;               
 			const dir  = btn.dataset.dir === 'left' ? -1 : 1;
 			track.scrollBy({ left: dir * step, behavior: 'smooth' });
 		});
@@ -491,7 +477,7 @@
 	});
 </script>
 
-<!-- JS para expandir el text -->
+<!-- JS for text expanding -->
 <script>
 window.addEventListener('DOMContentLoaded', () => {
 document.querySelectorAll('[data-bs-toggle="collapse"][data-preview]').forEach(btn => {
@@ -505,10 +491,10 @@ document.querySelectorAll('[data-bs-toggle="collapse"][data-preview]').forEach(b
 	const sync = () => {
 	const open = target.classList.contains('show');
 	btn.textContent = open ? less : more;
-	if (preview) preview.classList.toggle('d-none', open); // oculta teaser al expandir
+	if (preview) preview.classList.toggle('d-none', open); 
 	};
 
-	sync();                            // estado inicial
+	sync();                          
 	target.addEventListener('shown.bs.collapse',  sync);
 	target.addEventListener('hidden.bs.collapse', sync);
 });
