@@ -65,13 +65,13 @@ data_esp = {
 		 'date': '2021 - 2023',
 		 'place': 'IES Ramón Arcas Meca, Lorca (Murcia)',
 		 'description': ['Nota media de 10.', 'Nota de admisión final en la EBAU de 13.69/14','Graduado con Mención Honorífica en toda la etapa.', 'Premiado en la Olimpiada de Física (Universidad de Murcia) - 8º puesto.', 'Participación en talleres de debate y de música.'],
-		 'certificados': ['informe_alu_interno.pdf']},
+		 'certificados': ['matricula-bachiller.pdf']},
 	],
 
 	'languages': [
 		{'lang': "Español", "level": "Lengua Materna", "certificate": ""},
-		{'lang': "Inglés", "level": "Avanzado C1", "certificate": "AÑADIR"},  #"english_c1.pdf" dentro de static/files
-		{'lang': "Francés", "level": "Intermedio Alto B2", "certificate": "AÑADIR"},
+		{'lang': "Inglés", "level": "Avanzado C1", "certificate": "c1.pdf"},  
+		{'lang': "Francés", "level": "Intermedio Alto B2", "certificate": "b2-frances.pdf"},
 		{'lang': "Japonés", "level": "Básico", "certificate": ""}
 	],
 
@@ -237,13 +237,13 @@ data_eng = {
 			 'Graduated with Honors Distinction throughout the entire stage.', 
 			 'Awarded 8th place in the Physics Olympiad (University of Murcia).', 
 			 'Participation in debate and music clubs.'],
-		 'certificados': ['PENDING']},
+		 'certificados': ['matricula-bachiller.pdf']},
 	],
 
 	'languages': [
 		{'lang': "Spanish", "level": "Native Speaker", "certificate": ""},
-		{'lang': "English", "level": "Advanced C1", "certificate": "AÑADIR"},  #"english_c1.pdf" dentro de static/files
-		{'lang': "French", "level": "Medium-high B2", "certificate": "AÑADIR"},
+		{'lang': "English", "level": "Advanced C1", "certificate": "c1.pdf"},  
+		{'lang': "French", "level": "Medium-high B2", "certificate": "b2-frances.pdf"},
 		{'lang': "Japanese", "level": "Basic", "certificate": ""}
 	],
 
