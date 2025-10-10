@@ -206,7 +206,7 @@ data_eng = {
 		 'description': [
 			 'Supervised by Dr. José Rubén Titos.',
 			 'Introduction to scientific reasearch - reading and producing academic papers in various contexts.',
-			 "Participation in drafting a scientific article on the "Bash Logger" project, a Bash learning tool to whose development I have contributed",
+			 'Participation in drafting a scientific article on the "Bash Logger" project, a Bash learning tool to whose development I have contributed',
 			 'Participation in the development of tools to enhance the resources of a course within my own degree program.',
 			 'Programming several utilities to strengthen automated and individual learning.',
 			 'Large-scale student data analysis projects aimed at improving course quality.',
