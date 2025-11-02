@@ -48,7 +48,7 @@ data_esp = {
 		{'type': 'Alumno Interno en el Departamento de Ingeniería y Tecnología de Computadores',
 		 'date': '2024 - Actualidad',
 		 'place': 'Universidad de Murcia, España',
-		 'description': ['Tutelado por el Dr. José Rubén Titos.', 'Iniciación en el ámbito de la investigación científicos - Lectura y producción de "papers".', 'Participación en el desarrollo de herramientas para mejorar los recursos de una asignatura de mi propio grado.', 'Programación de utilidades para favorecer el aprendizaje automatizado.', 'Proyectos de análisis de grandes cantidades de datos de alumnos para mejorar la calidad de la asignatura.', 'Se pueden ver las actividades realizadas con detalle durante el curso 2024-25 en el informe.'],
+		 'description': ['Tutelado por el Dr. José Rubén Titos.', 'Iniciación en el ámbito de la investigación científicos - Lectura y producción de "papers".', 'Participación en redacción de un artículo sobre la herramienta de aprendizaje de Bash, "Bash Logger", en cuyo desarrollo he contribuido.', 'Participación en el desarrollo de herramientas para mejorar los recursos de una asignatura de mi propio grado.', 'Programación de utilidades para favorecer el aprendizaje automatizado.', 'Proyectos de análisis de grandes cantidades de datos de alumnos para mejorar la calidad de la asignatura.', 'Se pueden ver las actividades realizadas con detalle durante el curso 2024-25 en el informe.'],
 		 'certificados': [
 			{'nombre': 'Nombramiento Curso 24/25', 'file': 'nombramiento_alu_interno.pdf'},
 			{'nombre': 'Informe Curso 24/25', 'file': 'informe_alu_interno_24-25.pdf'}
@@ -204,8 +204,9 @@ data_eng = {
 		 'date': '2024 - Present',
 		 'place': 'University of Murcia, Spain',
 		 'description': [
-			 'Supervised by Dr. José Rubén Titos.', 
+			 'Supervised by Dr. José Rubén Titos.',
 			 'Introduction to scientific reasearch - reading and producing academic papers in various contexts.',
+			 'Participation in drafting a scientific article on the "Bash Logger" project, a Bash learning tool to whose development I have contributed',
 			 'Participation in the development of tools to enhance the resources of a course within my own degree program.',
 			 'Programming several utilities to strengthen automated and individual learning.',
 			 'Large-scale student data analysis projects aimed at improving course quality.',
