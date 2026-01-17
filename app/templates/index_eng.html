@@ -230,7 +230,7 @@
 							{% for cert in s.files %}
 							<a href="{{ url_for('static', filename='files/' ~ cert) }}"
 								class="btn btn-dark btn-sm me-2 mb-2" download>
-								Diploma Curso
+								Course Certification
 							</a>
 							{% endfor %}
 						</div>
@@ -428,13 +428,25 @@
 						data-collapse-text="See less">
 						See more
 					</button>
-
+					
+					<!-- LINK -->
 					{% if p.link %}
 					<div class="card-actions">
 						<a href="{{ p.link }}"
 							class="btn btn-dark btn-sm me-2 mb-2" 
 							target="_blank" rel="noopener noreferrer">
 							Project Link
+						</a>
+					</div>
+					{% endif %}
+					
+					<!-- CONTENIDO -->
+					{% if p.doc %}
+					<div class="card-actions">
+						<a href="{{ url_for('static', filename='files/' ~ p.doc) }}"
+						class="btn btn-dark btn-sm me-2 mb-2" style="font-size: 1.1rem;"
+						download="">
+						Acceso al Proyecto
 						</a>
 					</div>
 					{% endif %}

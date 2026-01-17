@@ -122,13 +122,6 @@ data_esp = {
 		 'img': 'pokemon.jpg',
 		 'technologies': ['R', 'LaTeX', 'Análisis Exploratorio de Datos', 'Análisis de Componentes Principales', 'Clustering Particional y Jerárquico', 'Regresión']},
 
-		 {'name': 'Análisis Estadístico de la Pokédex Nacional', 
-   		 'date': 'Autor; Enero 2025 - Junio 2025',
-		 'description': 'Análisis de las 1025 especies de Pokémon existentes, con variables como HP, ataque, defensa, etc. El objetivo fue encontrar patrones o relaciones ocultas entre los individuos, desentrañando de forma matemática y rigurosa la lógica detrás de estos videojuegos. Se aplican técnicas de Análisis Estadístico y Machine Learning para el estudio del dataset, a la vez que se ofrecen conclusiones orientadas al funcionamiento del juego. Además, el estudio converge en el desarrollo de un recomendador automático e inteligente de Pokémon para completar un equipo.',
-		 'link': 'https://github.com/jorge-ruizl-um-es/pokedex-analysis.git',
-		 'img': 'pokemon.jpg',
-		 'technologies': ['R', 'LaTeX', 'Análisis Exploratorio de Datos', 'Análisis de Componentes Principales', 'Clustering Particional y Jerárquico', 'Regresión']},
-
 		 {'name': 'Página web personal interactiva', 
    		 'date': 'Autor; Agosto 2025',
 		 'description': 'Aplicación web personal desarrollada con Flask que funciona como un currículum interactivo y bilingüe (español e inglés). Incluye una página inicial para seleccionar el idioma, secciones organizadas y dinámicas (como carruseles para estudios o habilidades) y la posibilidad de descargar el CV en PDF, ofreciendo una carta de presentación moderna y navegable para mostrar mi trayectoria profesional y personal. Se trata de un primer proyecto sencillo para iniciarme en la programación de aplicaciones web.',
@@ -136,12 +129,26 @@ data_esp = {
 		 'img': 'web.png',
 		 'technologies': ['Python', 'Flask', 'HTML', 'Bootstrap', 'CSS']},
 
+		 {'name': 'Aplicación de Procesamiento de Datos en Cloud para el Mar Menor (AWS)', 
+   		 'date': 'Autor; Octubre 2025 - Diciembre 2025',
+		 'description': 'Desarrollo de una arquitectura Cloud en AWS orientada al procesamiento y consulta de datos de temperatura del Mar Menor mediante un enfoque híbrido serverless y de orquestación de contenedores. El sistema implementa un pipeline ETL serverless basado en S3, AWS Lambda, Glue y Athena para la ingesta, transformación y almacenamiento de datos en batches, manteniendo un conjunto global actualizado. Sobre esta infraestructura se despliega una aplicación web desarrollada en Flask y contenerizada con Docker, orquestada mediante ECS sobre instancias EC2. La solución es escalable, tolerante a fallos y accesible a través de un balanceador de carga, incorporando políticas de autoescalado. Toda la infraestructura se define y despliega de forma automática mediante plantillas de CloudFormation, permitiendo la replicación completa del sistema en cualquier cuenta de AWS.',
+		 'link': 'https://github.com/jorge-ruizl-um-es/aws-cloud-app-project.git',
+		 'img': 'mar-menor.jpg',
+		 'technologies': ['AWS Cloud', 'Flask', 'Docker', 'Python', 'CloudFormation', 'ECS']},
+
 		 {'name': 'Predicción de Visibilidad en los Lagos de Covadonga', 
    		 'date': 'Autor; Junio 2025 - Agosto 2025',
 		 'description': 'Debido al problema que afrontan muchos turistas cada año al querer visitar una zona con un clima tan impredecible, se propone un estudio basado en datos y medidas reales para tratar de prever las condiciones de visibilidad a causa de la niebla. Se extraen datos históricos directamente de la API de la AEMET y de la observación directa de la zona para, a partir de la aplicación de diversos modelos de Machine Learning, ofrecer una predicción sobre la visibilidad en base a las previsiones introducidas para el día deseado. Se incluye el uso de un LLM ejecutado en local para ayudar con un aspecto de la limpieza y preparación de los datos.',
 		 'link': 'https://github.com/jorge-ruizl-um-es/fog-prediction.git',
 		 'img': 'lagos.jpg',
 		 'technologies': ['Python', 'Pandas', 'Matplotlib', 'Scikit-Learn', 'Keras', 'Ollama']},
+
+		 {'name': 'Informe Corporativo de Auditoría en Ciberseguridad Ofensiva (pentesting)', 
+   		 'date': 'Autor; Septiembre 2025 - Octubre 2025',
+		 'description': 'Como parte de mi formación en ciberseguridad y auditorías de aplicaciones web, me he enfrentado a simulaciones de entornos corporativos donde detectar y explotar todas las vulnerabilidades posibles. En este ejemplo, auditamos sobre una aplicación de compartición y creación de repositorios de trabajo (estilo Git). A través de una serie de pruebas y examinando a nivel profundo la web (subdirectorios, activos, código accesible directa o indirectamente...), se han ido detectando vulnerabilidades y registrando el alcance o nivel de riesgo en el informe, con un enfoque empresarial. Con las pruebas realizadas, se han conseguido detectar fallos de seguridad que ponen en riesgo a la supuesta compañía, llegando incluso a poder obtener acceso como administrador o ejecutar comandos en remoto en el servidor que proporciona el servicio (RCE).',
+		 'doc': 'informe-auditoria.pdf',
+		 'img': 'auditoria.png',
+		 'technologies': ['Kali Linux', 'Command Injection', 'SQL Injection', 'XSS Attack', 'Cookie Hijacking', 'RCE']},
 
 		 {'name': 'Autocorrector de Comandos de Bash', 
    		 'date': 'Autor; Diciembre 2024 - Abril 2025',
@@ -296,12 +303,26 @@ data_eng = {
 		 'img': 'web.png',
 		 'technologies': ['Python', 'Flask', 'HTML', 'Bootstrap', 'CSS']},
 
+		 {'name': 'Cloud-Native Temperature Data Processing Platform for Mar Menor (AWS)', 
+   		 'date': 'Author; October 2025 – December 2025',
+		 'description': 'Development of a cloud architecture on AWS focused on processing and querying temperature data from the Mar Menor using a hybrid approach combining serverless technologies and container orchestration. The system implements a serverless ETL pipeline based on S3, AWS Lambda, Glue, and Athena for batch data ingestion, transformation, and storage, maintaining an up-to-date global dataset. On top of this infrastructure, a web application developed with Flask and containerized using Docker is deployed and orchestrated with ECS on EC2 instances. The solution is scalable, fault-tolerant, and accessible through a load balancer, incorporating auto-scaling policies. All required infrastructure and configurations are automatically defined and deployed using CloudFormation templates, enabling full replication of the system in any AWS account.',
+		 'link': 'https://github.com/jorge-ruizl-um-es/aws-cloud-app-project.git',
+		 'img': 'mar-menor.jpg',
+		 'technologies': ['AWS Cloud', 'Flask', 'Docker', 'Python', 'CloudFormation', 'ECS']},
+
 		 {'name': 'Visibility Prediction in the Lakes of Covadonga', 
    		 'date': 'Author; June 2025 - August 2025',
 		 'description': 'Given the difficulties faced by many tourists each year when visiting an area with highly unpredictable weather like this one, the project proposes a study based on real data and measurements to predict visibility conditions caused by fog. Historical data were extracted directly from the AEMET API and on-site observations. Several Machine Learning models were applied to forecast visibility based on the provided weather conditions for a chosen day. The project also incorporates the use of a locally deployed LLM to support data cleaning and preprocessing.',
 		 'link': 'https://github.com/jorge-ruizl-um-es/fog-prediction.git',
 		 'img': 'lagos.jpg',
 		 'technologies': ['Python', 'Pandas', 'Matplotlib', 'Scikit-Learn', 'Keras', 'Ollama']},
+
+		 {'name': 'Corporate Cybersecurity Audit Report in Offensive Security (Pentesting)',
+		  'date': 'Author; September 2025 – October 2025',
+		  'description': 'As part of my training in cybersecurity and web application auditing, I have worked on simulated corporate environments aimed at detecting and exploiting all possible vulnerabilities. In this case, the audit was conducted on a repository sharing web application (Git-like platform). Applying some tests and an in-depth examination of the web application (subdirectories, assets, source code directly or indirectly accessible, etc.), vulnerabilities were identified and their impact and risk level documented in a business-oriented report. As a result of the performed tests, critical security flaws were discovered, including the possibility of obtaining administrator-level access and executing remote commands on the server providing the service (RCE).',
+		  'doc': 'informe-auditoria.pdf',
+		  'img': 'auditoria.png',
+		  'technologies': ['Kali Linux', 'Command Injection', 'SQL Injection', 'XSS Attack', 'Cookie Hijacking', 'RCE']},
 
 		 {'name': 'Bash Commands Autocorrector', 
    		 'date': 'Author; December 2024 - April 2025',
