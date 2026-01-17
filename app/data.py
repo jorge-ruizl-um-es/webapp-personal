@@ -23,6 +23,10 @@ data_esp = {
    		 'description': 'Soy capaz de extraer y formatear datos manejando distintos tipos de ficheros, además de aplicar técnicas de análisis para obtener métricas, gráficas o conclusiones que permitan tomar decisiones',
 		 'skill_detail': ['Pandas', 'Matplotlib', 'Seaborn', 'R', 'JSON', 'CSV', 'Excel']},
 
+		 {'skill': 'Cloud Computing (AWS) & Conteinerized Applications',
+   		 'description': 'Nivel intermedio con experiencia en proyectos prácticos. Soy capaz de desarrollar aplicaciones en AWS, aprovisionando y gestionando automáticamente el entorno con la infraestructura necesaria a nivel de servidores virtuales (EC2), redes... (IaC).',
+		 'skill_detail': ['AWS', 'Docker', 'IaC', 'CloudFormation', 'ECS', 'VPC']},
+
 		 {'skill': 'Análisis Matemático y Estadístico',
    		 'description': 'Mi formación incluye experiencia en el ámbito matemático, por lo que he desarrollado el pensamiento analítico y la disciplina que requiere este campo; además de tener una sólida base en estadística.',
 		 'skill_detail': ['Numpy', 'Simpy', 'Álgebra', 'Optimización', 'Cálculo', 'LaTeX', 'Markdown', 'Estadística']},
@@ -30,6 +34,10 @@ data_esp = {
 		 {'skill': 'Machine Learning e Inteligencia Artificial',
    		 'description': 'Tengo experiencia en el desarrollo y aplicación de modelos a partir de datos previamente tratados, permitiendo realizar predicciones y ayudando a la toma de decisiones.',
 		 'skill_detail': ['Scikit-Learn', 'Keras', 'Tensorflow', 'Python + R']},
+
+		 {'skill': 'Procesamiento de Imagen y Visión Artificial',
+   		 'description': 'Formación básica en mejora de visibilidad de imágenes, extracción de características y preparación para poder procesarlas en algoritmos más complejos de IA y Visión Artificial.',
+		 'skill_detail': ['CV2', 'Scikit-image', 'Matplotlib', 'SciPy', 'PIL']},
 
 		 {'skill': 'Herramientas colaborativas y trabajo en equipo',
    		 'description': 'Trabajo constantemente con Git y Google Collab, además de contribuir en proyectos de mayor envergadura como alumno interno, o colaborar con otros de mis compañeros. Soy muy activo en GitHub.',
@@ -39,9 +47,9 @@ data_esp = {
    		 'description': 'Trabajo cómodamente en entornos de Linux. Estoy acostumbrado a interactuar con la terminal y con el shell, lo que supone un aumento en mi eficiencia al realizar ciertas tareas.',
 		 'skill_detail': ['Bash', 'RegEx', 'Shell Scripting', 'SSH y administración remota', 'Gestión de permisos']},
 
-		 {'skill': 'Iniciación en ciberseguridad',
-   		 'description': 'Aunque mi formación no lo incluye, es un campo que me interesa y en el que me estoy formando por mi cuenta. Formo parte del club de ciberseguridad y hacking ético de mi universidad.',
-		 'skill_detail': ['Local File Inclusion', 'Cracking', 'File Upload Attacks', 'SQL Injection', 'Redes']}
+		 {'skill': 'Ciberseguridad y Pentesting Web',
+   		 'description': 'Es un campo que me interesa y en el que empecé formándome por mi cuenta. Me apunté al club de ciberseguridad y hacking ético de mi universidad; y he completado una microcredencial universitaria en pentesting y seguridad de aplicaciones web.',
+		 'skill_detail': ['Local File Inclusion', 'Cracking', 'File Upload Attacks', 'SQL Injection', 'XSS Attacks', 'Redes']}
 	],
 
 	'experience': [
@@ -59,7 +67,7 @@ data_esp = {
 		{'type': 'Grado en Ciencia e Ingeniería de Datos',
 		 'date': '2023 - Actualidad',
 		 'place': 'Universidad de Murcia, España',
-		 'description': ['Herramientas de análisis de datos avanzado, estadística, Machine Learning, tratamiento de datos, etc.', 'Aprendizaje con proyectos para poner en práctica los contenidos teóricos.', 'Realización de prácticas tanto individuales como en grupos.', 'En proceso - Nota media de 9.8 y 19 asignaturas con Matrícula de Honor.']},
+		 'description': ['Herramientas de análisis de datos avanzado, estadística, Machine Learning, tratamiento de datos, etc.', 'Aprendizaje con proyectos para poner en práctica los contenidos teóricos.', 'Realización de prácticas tanto individuales como en grupos.', 'En proceso - Nota media de 9.8 y 24 asignaturas con Matrícula de Honor.']},
 		
 		{'type': 'Bachillerato en Ciencias',
 		 'date': '2021 - 2023',
@@ -94,6 +102,7 @@ data_esp = {
 		{"title": "Cassandra", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cassandra/cassandra-original-wordmark.svg"},
 		{"title": "Neo4j", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neo4j/neo4j-original-wordmark.svg"},
 		{"title": "Anaconda", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/anaconda/anaconda-original-wordmark.svg"},
+		{"title": "AWS", "file": "https://img.icons8.com/?size=100&id=33039&format=png&color=000000"},
 		{"title": "Colab", "file": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg"}
 	],
 
@@ -178,6 +187,10 @@ data_eng = {
    		 'description': 'I am able to extract and format data from different type of files, as well a applying analytical techniques for obtaining metrics, visualizations and insights that support decision-making.',
 		 'skill_detail': ['Pandas', 'Matplotlib', 'Seaborn', 'R', 'JSON', 'CSV', 'Excel']},
 
+		 {'skill': 'Cloud Computing (AWS) & Conteinerized Applications',
+   		 'description': 'Intermediate level with hands-on project experience. I am capable if developing apps on AWS, automatically provisioning and managing the required infrastructure — such as virtual servers (EC2), networking components, and related resources — using Infrastructure as Code (IaC).',
+		 'skill_detail': ['AWS', 'Docker', 'IaC', 'CloudFormation', 'ECS', 'VPC']},
+
 		 {'skill': 'Mathematical and Statistical Analysis',
    		 'description': 'My academic background includes experience in mathematics, which has strengthened my analytical thinking and discipline; in addition to providing a solid foundation in statistics.',
 		 'skill_detail': ['Numpy', 'Simpy', 'Algebra', 'Optimization', 'Calculus', 'LaTeX', 'Markdown', 'Statistics']},
@@ -185,6 +198,10 @@ data_eng = {
 		 {'skill': 'Machine Learning and Artificial Intelligence',
    		 'description': 'I bring significant expertise in the development and application of models based on previously processed data, enabling predictions and supporting decision-making.',
 		 'skill_detail': ['Scikit-Learn', 'Keras', 'Tensorflow', 'Python + R']},
+
+		 {'skill': 'Image Processing and Artificial Vision',
+   		 'description': 'Basic formation in image enhancement, feature detection, characterization and data preparation for processing images with more advanced AI and Computer Vision algorithms.',
+		 'skill_detail': ['CV2', 'Scikit-image', 'Matplotlib', 'SciPy', 'PIL']},
 
 		 {'skill': 'Colaborative tools and Teamwork',
    		 'description': 'I constantly work on Git and Google Collab, as well as contributing to larger scale projects as a student assistant or in collaboration with classmates. In fact, I am genuinely active on GitHub',
@@ -194,9 +211,9 @@ data_eng = {
    		 'description': 'I am comfortable working on Linux environments.  I am used to interacting with the terminal and shell, which increases my efficiency when performing certain tasks.',
 		 'skill_detail': ['Bash', 'RegEx', 'Shell Scripting', 'SSH y remote administration', 'Permissions management']},
 
-		 {'skill': 'Introduction to Cybersecurity',
-   		 'description': "Despite the fact that it is not part of my formal studies, cybersecurity is a field that has sparked my interest, and I am currently learning on my own. I take part in activities organised by my university's cybersecurity and ethical hacking club.",
-		 'skill_detail': ['Local File Inclusion', 'Cracking', 'File Upload Attacks', 'SQL Injection', 'Networking']}
+		 {'skill': 'Cybersecurity and Web Pentesting',
+   		 'description': "It is a fild that sparked my interest, and which I started learning on my own. I took part in activities organised by my university's cybersecurity and ethical hacking club; and I've fulfilled a micro-credential in pentesting and web applications security.",
+		 'skill_detail': ['Local File Inclusion', 'Cracking', 'File Upload Attacks', 'SQL Injection', 'XSS Attacks', 'Networking']}
 	],
 
 	'experience': [
