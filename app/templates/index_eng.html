@@ -55,6 +55,7 @@
 						<li class="mb-3">Data Analysis and Visualization</li>
 						<li class="mb-3">Automation with Python (ETL, scraping, APIs)</li>
 						<li class="mb-3">Client–Server Development · Networking</li>
+						<li class="mb-3">Cloud Computing (AWS), infrastructure and app deployment</li>
 					</ul>
 
 					<br>
@@ -223,6 +224,17 @@
 						<li>{{ d }}</li>
 					{% endfor %}
 					</ul>
+
+					{% if s.files %}
+						<div class="card-actions">
+							{% for cert in s.files %}
+							<a href="{{ url_for('static', filename='files/' ~ cert) }}"
+								class="btn btn-dark btn-sm me-2 mb-2" download>
+								Diploma Curso
+							</a>
+							{% endfor %}
+						</div>
+					{% endif %}
 				</div>
 			</div>
 		{% endfor %}

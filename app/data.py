@@ -49,7 +49,8 @@ data_esp = {
 
 		 {'skill': 'Ciberseguridad y Pentesting Web',
    		 'description': 'Es un campo que me interesa y en el que empecé formándome por mi cuenta. Me apunté al club de ciberseguridad y hacking ético de mi universidad; y he completado una microcredencial universitaria en pentesting y seguridad de aplicaciones web.',
-		 'skill_detail': ['Local File Inclusion', 'Cracking', 'File Upload Attacks', 'SQL Injection', 'XSS Attacks', 'Redes']}
+		 'skill_detail': ['Local File Inclusion', 'Cracking', 'File Upload Attacks', 'SQL Injection', 'XSS Attacks', 'Redes'],
+		 'files': ['diploma-ciberseguridad.pdf']}
 	],
 
 	'experience': [
@@ -113,6 +114,13 @@ data_esp = {
 		 'link': '',
 		 'img': 'bash-logger.png',
 		 'technologies': ['Python', 'Bash', 'Comunicación Cliente-Servidor', 'Git']},
+
+		 {'name': 'Análisis Estadístico de la Pokédex Nacional', 
+   		 'date': 'Autor; Enero 2025 - Junio 2025',
+		 'description': 'Análisis de las 1025 especies de Pokémon existentes, con variables como HP, ataque, defensa, etc. El objetivo fue encontrar patrones o relaciones ocultas entre los individuos, desentrañando de forma matemática y rigurosa la lógica detrás de estos videojuegos. Se aplican técnicas de Análisis Estadístico y Machine Learning para el estudio del dataset, a la vez que se ofrecen conclusiones orientadas al funcionamiento del juego. Además, el estudio converge en el desarrollo de un recomendador automático e inteligente de Pokémon para completar un equipo.',
+		 'link': 'https://github.com/jorge-ruizl-um-es/pokedex-analysis.git',
+		 'img': 'pokemon.jpg',
+		 'technologies': ['R', 'LaTeX', 'Análisis Exploratorio de Datos', 'Análisis de Componentes Principales', 'Clustering Particional y Jerárquico', 'Regresión']},
 
 		 {'name': 'Análisis Estadístico de la Pokédex Nacional', 
    		 'date': 'Autor; Enero 2025 - Junio 2025',
@@ -213,7 +221,8 @@ data_eng = {
 
 		 {'skill': 'Cybersecurity and Web Pentesting',
    		 'description': "It is a fild that sparked my interest, and which I started learning on my own. I took part in activities organised by my university's cybersecurity and ethical hacking club; and I've fulfilled a micro-credential in pentesting and web applications security.",
-		 'skill_detail': ['Local File Inclusion', 'Cracking', 'File Upload Attacks', 'SQL Injection', 'XSS Attacks', 'Networking']}
+		 'skill_detail': ['Local File Inclusion', 'Cracking', 'File Upload Attacks', 'SQL Injection', 'XSS Attacks', 'Networking'],
+		 'files': ['diploma-ciberseguridad.pdf']}
 	],
 
 	'experience': [

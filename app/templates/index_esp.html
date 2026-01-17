@@ -55,6 +55,7 @@
 						<li class="mb-3">Análisis de datos y visualización</li>
 						<li class="mb-3">Automatización con Python (ETL, scrapping, APIs)</li>
 						<li class="mb-3">Desarrollo cliente/servidor · Redes</li>
+						<li class="mb-3">Cloud Computing (AWS), despliegue de infraestructura y apps</li>
 					</ul>
 
 					<br>
@@ -211,7 +212,7 @@
 	<div class="container my-5 px-5" id="habilidades">
 		<h2 class="mb-1">Habilidades destacables</h2>
 		<p class="fs-5 mb-4" style="font-size: large;">
-			Habilidades o aptitudes que he ido adquieriendo gracias a mi formación tanto académica 
+			Habilidades o aptitudes que he ido adquiriendo gracias a mi formación tanto académica 
 			como autodidacta o mediante cursos.
 		</p>
 
@@ -231,6 +232,17 @@
 						<li>{{ d }}</li>
 					{% endfor %}
 					</ul>
+
+					{% if s.files %}
+						<div class="card-actions">
+							{% for cert in s.files %}
+							<a href="{{ url_for('static', filename='files/' ~ cert) }}"
+								class="btn btn-dark btn-sm me-2 mb-2" download>
+								Diploma Curso
+							</a>
+							{% endfor %}
+						</div>
+					{% endif %}
 				</div>
 			</div>
 		{% endfor %}
