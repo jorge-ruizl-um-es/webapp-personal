@@ -1,11 +1,11 @@
-# 🌐 Personal CV Web App
+# Personal CV Web App
 
 Welcome to my **interactive personal website**, a project built with [Flask](https://flask.palletsprojects.com/) that works as a **dynamic CV/Portfolio**.  
 The application is bilingual (**Spanish 🇪🇸 / English 🇬🇧**) and provides a modern way to showcase my education, experience, projects, skills, and contact details.
 
 ---
 
-## ✨ Features
+## Features
 
 - **Bilingual interface** (Spanish & English).
 - **Downloadable CV** in PDF format.
@@ -17,17 +17,17 @@ The application is bilingual (**Spanish 🇪🇸 / English 🇬🇧**) and provi
 
 ---
 
-## 📷 Screenshots
+## Screenshots
 
-### 🌍 Language Selector
+### Language Selector
 ![Language Selector](app/static/images/lang_selector.png)
 
-### 🏠 Homepage (Spanish)
+### Homepage (Spanish)
 ![Homepage Spanish](app/static/images/home_es.png)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend:** [Flask 3](https://flask.palletsprojects.com/)
 - **Frontend:** HTML5, [Bootstrap 5](https://getbootstrap.com/), CSS3
@@ -37,7 +37,7 @@ The application is bilingual (**Spanish 🇪🇸 / English 🇬🇧**) and provi
 
 ---
 
-## 🚀 Installation & Usage
+## Installation & Usage
 
 1. **Clone the repository**
 	```bash
@@ -67,7 +67,7 @@ The application is bilingual (**Spanish 🇪🇸 / English 🇬🇧**) and provi
    http://127.0.0.1:5000/
    ```
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 my-cv-webapp/
@@ -89,7 +89,7 @@ my-cv-webapp/
 
 ```
 
-## 📬 Contact
+## Contact
 
 You can reach me through the following platforms:
 
@@ -100,7 +100,7 @@ You can reach me through the following platforms:
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License.  
 Feel free to use and adapt it for your own portfolio.
